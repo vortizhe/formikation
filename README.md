@@ -3,17 +3,17 @@
 
 *formikation* es un sencillo _embellecedor_ de formularios que emplea un sprite minísculo e intenta meter el mínimo HTML adicional posible para hacer los formularios bonitos. *Precisa JQuery*.
 
-Los elementos que procesa son:
-`input:checkbox`
-`input:radiobutton`
-`input:file`
+Los elementos que procesa son:  
+`input:checkbox`  
+`input:radiobutton`  
+`input:file`  
 `select`
 
 ### Ficheros requeridos
 
-`JQuery 1.9+`
-`formikation.js`
-`formikation.css`
+`JQuery 1.9+`  
+`formikation.js`  
+`formikation.css`  
 `formikation-sprite.css`
 
 ## Requerimientos de HTML
