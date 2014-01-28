@@ -6,7 +6,8 @@
 */
 
 form.formication {
-  // Checks y radios
+
+  /* Checks y radios */
   input[type=checkbox], input[type=radio] {
     width: 19px;
     height: 20px;
@@ -26,14 +27,16 @@ form.formication {
     }
   }
   input[type=radio] {
-    background: red;
     &:before {
       background-position: -1px -20px;
       visibility: visible;
     }
   }
+
+  /* Labels */
   label {
     display: inline-block;
+    padding-right: 16px;
     cursor: pointer;
     &.checked {
       text-align: left;
@@ -49,16 +52,20 @@ form.formication {
       }
     }
   }
-  /* SELECT TAG */
+
+  /* Select tag */
   select {
     // width: 100%; // Full width
     min-width: 250px;
   }
+
+  /* Select span */
   .select {
     // width: 100%; // Full width
     min-width: 250px;
     padding: 8px 15px 4px 4px;
     border: 1px solid #ccc;
+    background: #fff;
     border-radius: 3px;
 
     &:after {
@@ -92,7 +99,7 @@ form.formication {
     }
   }
 
-  /* Campos de textos */
+  /* Campos de texto */
   input[type=text],
   input[type=password],
   textarea {
@@ -105,6 +112,7 @@ form.formication {
 
     font-size: 14px;
     border-radius: 3px;
+    color: #333;
 
     -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2);
@@ -121,48 +129,119 @@ form.formication {
   =====================================
 */
 
-form.formication {
+form.formication.ue-theme {
 
-  // Themes
-  &.ue-theme {
+  font: 400 14px/1.25 'Oswald', Arial, Helvetica, sans-serif;
+  text-align: left;
 
-    .row {
-      padding-bottom: 16px;
+  .row {
+    padding-bottom: 16px;
+  }
+
+  form {
+    padding: 16px;
+  }
+
+  fieldset {
+    border: 1px solid #ccc;
+    background: #f8f8f8;
+    margin: 0;
+    padding: 20px;
+  }
+
+  /* Label */
+  label {
+    padding-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  /* Select tag */
+  .select {
+    // width: 100%; // Full width
+    min-width: 250px;
+    padding: 8px 15px 7px 4px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+
+    &:after {
+      content: url('filter-arrow-double.png');
+      display: block;
+      float: right;
+      padding: 8px 6px 7px 6px ;
+      margin: -7px -15px;
+      border-left: 0;
     }
-
-    form {
-      padding: 16px;
-    }
-
-    fieldset {
-      border: 1px solid #ccc;
+    .select-label {
+      display: inline-block;
       margin: 0;
-      padding: 20px;
+      padding: 0 30px 0 0;
+      color: #666;
+
+      max-width: 430px; // This set max width before ellipsis
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
-
-    input[type=submit] {
-      width: 124px;
-      height: 35px;
-      border: 1px solid #6A0311;
-      border-radius: 4px;
-
-      margin-right: 16px;
-      font-family: 'Oswald', Arial, Helvetica, sans-serif;
-      text-align: center;
-      color: #fff;
-
-      background: #A1071B;
-      background-image: -webkit-linear-gradient(80% 0% -85deg, #b3071b 0%, #7f071b 93%, #7c071b 99%);
-      background-image: -moz-linear-gradient(80% 0% -85deg, #b3071b 0%, #7f071b 93%, #7c071b 99%);
-      background-image: -o-linear-gradient(80% 0% -85deg, #b3071b 0%, #7f071b 93%, #7c071b 99%);
-      background-image: linear-gradient(80% 0% -85deg, #b3071b 0%, #7f071b 93%, #7c071b 99%);
-
-      -moz-box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.35);
-      -webkit-box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.35);
-      box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.35);
-      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffb3071b,endColorstr=#ff7c071b,GradientType=1)";
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffb3071b,endColorstr=#ff7c071b,GradientType=1);
+    &.selectFocus {
+      border-color: #000;
+      &:after { border-color: #000; }
+      .select-label { color: #000; }
+    }
+    .field_with_errors & {
+      border-color: red;
+      &:after { border-color: red; }
+      .file-label { color: red; }
     }
   }
 
-}
+  /* Checks y radios */
+  input[type=checkbox], input[type=radio] {
+    &:before {
+      background: url('formikation-sprite-ue-theme.png') no-repeat -1px 0;
+    }
+  }
+
+  /* Campos de texto */
+  input[type=text],
+  input[type=password],
+  textarea {
+    width: 100%;
+
+    padding: 8px 4px;
+    background: #fff;
+    border: 1px solid #ccc;
+    outline: 0;
+
+    border-radius: 0;
+
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    &:focus {
+      border-color: #000;
+    }
+  }
+
+  /* Botón de enviar */
+  input[type=submit] {
+    min-width: 120px;
+    height: auto;
+    display: inline-block;
+    position: relative;
+
+    padding: 0.95em 10px 1.05em 10px;
+    margin-right: 16px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+
+    font: 400 14px/1.25 'Oswald', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+
+    background-color: #8f1b27;
+    border-radius: 3px;
+    }
+  }
