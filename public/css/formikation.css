@@ -6,39 +6,50 @@
 */
 form.formication {
   /* Checks y radios */
+  /* input[type=radio] {
+    &:before {
+      background-position: -1px -20px;
+      visibility: visible;
+    }
+  } */
   /* Labels */
   /* Select tag */
   /* Select span */
   /* Campos de texto */ }
   form.formication input[type=checkbox], form.formication input[type=radio] {
-    width: 19px;
-    height: 20px;
     padding-top: 1px;
     margin: 0;
     padding: 0;
     cursor: pointer;
-    visibility: hidden; }
-    form.formication input[type=checkbox]:before, form.formication input[type=radio]:before {
+    /* &:before {
       content: ' ';
       display: inline-block;
       width: 19px;
       height: 20px;
       margin-top: 3px;
-      background: url("formikation-sprite.png") no-repeat -1px 0;
-      visibility: visible; }
-  form.formication input[type=radio]:before {
-    background-position: -1px -20px;
-    visibility: visible; }
+      background: url('formikation-sprite.png') no-repeat -1px 0;
+      visibility: visible;
+    } */ }
   form.formication label {
     display: inline-block;
     padding-right: 16px;
     cursor: pointer; }
-    form.formication label.checked {
-      text-align: left; }
-      form.formication label.checked input[type=checkbox]:before, form.formication label.checked input[type=radio]:before {
-        background-position: -21px 0; }
-      form.formication label.checked input[type=radio]:before {
-        background-position: -21px -20px; }
+    form.formication label.fk-radio:before, form.formication label.fk-check:before {
+      content: '';
+      display: inline-block;
+      float: left;
+      width: 19px;
+      height: 20px;
+      margin: -1px 4px 0 0;
+      background: url("formikation-sprite.png") no-repeat 0 0; }
+    form.formication label.fk-radio:before {
+      background-position: 0 -20px; }
+    form.formication label.checked.fk-radio:before {
+      background-position: -21px -20px; }
+    form.formication label.checked.fk-check:before {
+      background-position: -21px 0; }
+    form.formication label input[type=radio]:before {
+      background-position: -21px -20px; }
   form.formication select {
     min-width: 250px; }
   form.formication .select {

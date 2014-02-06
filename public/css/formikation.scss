@@ -9,14 +9,14 @@ form.formication {
 
   /* Checks y radios */
   input[type=checkbox], input[type=radio] {
-    width: 19px;
-    height: 20px;
+    // width: 0px;
+    // height: 0px;
     padding-top: 1px;
     margin: 0;
     padding: 0;
     cursor: pointer;
-    visibility: hidden;
-    &:before {
+    // visibility: hidden;
+    /* &:before {
       content: ' ';
       display: inline-block;
       width: 19px;
@@ -24,31 +24,53 @@ form.formication {
       margin-top: 3px;
       background: url('formikation-sprite.png') no-repeat -1px 0;
       visibility: visible;
-    }
+    } */
   }
-  input[type=radio] {
+  /* input[type=radio] {
     &:before {
       background-position: -1px -20px;
       visibility: visible;
     }
-  }
+  } */
 
   /* Labels */
   label {
     display: inline-block;
     padding-right: 16px;
     cursor: pointer;
+    &.fk-radio,
+    &.fk-check {
+      &:before {
+        content: '';
+        display: inline-block;
+        float: left;
+        width: 19px;
+        height: 20px;
+        margin: -1px 4px 0 0;
+        background: url('formikation-sprite.png') no-repeat 0 0;
+        // visibility: visible;
+      }
+    }
+    &.fk-radio {
+      &:before {
+        background-position: 0 -20px;
+      }
+    }
     &.checked {
-      text-align: left;
-      input[type=checkbox], input[type=radio] {
+      &.fk-radio {
+        &:before {
+          background-position: -21px -20px;
+        }
+      }
+      &.fk-check {
         &:before {
           background-position: -21px 0;
         }
       }
-      input[type=radio] {
-        &:before {
-          background-position: -21px -20px;
-        }
+    }
+    input[type=radio] {
+      &:before {
+        background-position: -21px -20px;
       }
     }
   }

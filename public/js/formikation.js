@@ -56,20 +56,35 @@
   // Aquí se procesan los checks
   processRadioCheck: function(el) {
     var
-      $el = $(el);
-    $el.on('click change update', function () {
+      $el = $(el),
+      $label = $el.closest('label');
+
+    // Add class with sprite
+    if ($el.is(':checkbox')) {
+      $label.addClass('fk-check');
+    } else {
+      $label.addClass('fk-radio');
+    }
+
+    $el.on('click', function() {
+      $el.trigger('update');
+    });
+
+    $el.on('update', function () {
       var
         $el = $(el),
-        label = $el.closest('label');
+        $label = $el.closest('label');
+
       if ($el.prop('checked')) {
-        label.addClass('checked');
+        $label.addClass('checked');
         $(':radio[name="'+$el.attr('name')+'"]').not($el).trigger('update');
       } else {
-        label.removeClass('checked');
+        $label.removeClass('checked');
       }
     });
+
     // if ($el.is(':radio')) {
-      $el.trigger('update');
+    $el.trigger('update');
     // }
   },
 
