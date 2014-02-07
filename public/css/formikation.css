@@ -14,7 +14,9 @@ form.formikation {
     padding-top: 1px;
     margin: 0;
     padding: 0;
-    cursor: pointer; }
+    cursor: pointer;
+    position: absolute;
+    left: -9999px; }
   form.formikation label {
     display: inline-block;
     padding-right: 16px;
@@ -150,8 +152,9 @@ form.formikation.ue-theme {
         border-color: red; }
       .field_with_errors form.formikation.ue-theme .select .file-label {
         color: red; }
-  form.formikation.ue-theme input[type=checkbox]:before, form.formikation.ue-theme input[type=radio]:before {
-    background: url("formikation-sprite-ue-theme.png") no-repeat -1px 0; }
+  form.formikation.ue-theme label.fk-check:before,
+  form.formikation.ue-theme label.fk-radio:before {
+    background-image: url("formikation-sprite-ue-theme.png"); }
   form.formikation.ue-theme input[type=text],
   form.formikation.ue-theme input[type=password],
   form.formikation.ue-theme textarea {

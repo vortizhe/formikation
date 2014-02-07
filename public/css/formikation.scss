@@ -13,6 +13,9 @@ form.formikation {
     margin: 0;
     padding: 0;
     cursor: pointer;
+    // We 'hide' the checks / radios moving them outside the screen
+    position: absolute;
+    left: -9999px;
   }
 
   /* Labels */
@@ -201,9 +204,10 @@ form.formikation.ue-theme {
   }
 
   /* Checks y radios */
-  input[type=checkbox], input[type=radio] {
+  label.fk-check,
+  label.fk-radio {
     &:before {
-      background: url('formikation-sprite-ue-theme.png') no-repeat -1px 0;
+      background-image: url('formikation-sprite-ue-theme.png');
     }
   }
 

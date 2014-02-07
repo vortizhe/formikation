@@ -52,11 +52,18 @@ Para pasar los parámetros de inicializción _(detallados más adelante)_ lo har
     
     });
 
+## IE8
+
+IE8 tiene dificultades checkeando / descheckeando radios y buttons _'invisibles'_ con `display: none;` o con  `visible:hidden` así que la solución es ponerlos en `absolute` y con un `left:-9999px` sacándolos de la pantalla.
+
+Otra peculiaridad de IE8 es que **no actualiza** los `pseudo-elementos` como el `:before` y el `:after` a no ser que el `content` cambie.
+
 ## Conflictos / precauciones varias
+
+To come.
 
 ## TO-DO
 
-- Asignar una clase `formikated-already` que permita filtrar los que ya están procesados y que no los vuelva a procesar.
 - Crear un método que haga `check` de radios y checkboxes programáticamente.
 - ¿Hacer un método que "desformike"?
 
