@@ -4,22 +4,22 @@
   Modify with care!
   =====================================
 */
-form.formication {
+form.formikation {
   /* Checks y radios */
   /* Labels */
   /* Select tag */
   /* Select span */
   /* Campos de texto */ }
-  form.formication input[type=checkbox], form.formication input[type=radio] {
+  form.formikation input[type=checkbox], form.formikation input[type=radio] {
     padding-top: 1px;
     margin: 0;
     padding: 0;
     cursor: pointer; }
-  form.formication label {
+  form.formikation label {
     display: inline-block;
     padding-right: 16px;
     cursor: pointer; }
-    form.formication label.fk-radio:before, form.formication label.fk-check:before {
+    form.formikation label.fk-radio:before, form.formikation label.fk-check:before {
       content: ' ';
       display: inline-block;
       float: left;
@@ -27,32 +27,32 @@ form.formication {
       height: 20px;
       margin: -1px 4px 0 0;
       background: url("formikation-sprite.png") no-repeat 0 0; }
-    form.formication label.fk-radio:before {
+    form.formikation label.fk-radio:before {
       background-position: 0 -20px; }
-    form.formication label.checked.fk-radio:before {
+    form.formikation label.checked.fk-radio:before {
       content: '';
       background-position: -21px -20px; }
-    form.formication label.checked.fk-check:before {
+    form.formikation label.checked.fk-check:before {
       content: '';
       background-position: -21px 0; }
-    form.formication label input[type=radio]:before {
+    form.formikation label input[type=radio]:before {
       background-position: -21px -20px; }
-  form.formication select {
+  form.formikation select {
     min-width: 250px; }
-  form.formication .select {
+  form.formikation .select {
     min-width: 250px;
     padding: 8px 15px 4px 4px;
     border: 1px solid #ccc;
     background: #fff;
     border-radius: 3px; }
-    form.formication .select:after {
+    form.formikation .select:after {
       content: url("filter-arrow.png");
       display: block;
       float: right;
       padding: 8px 12px;
       margin: -8px -15px;
       border-left: 1px solid #CCC; }
-    form.formication .select .select-label {
+    form.formikation .select .select-label {
       display: inline-block;
       margin: 0;
       padding: 0 30px 0 0;
@@ -61,21 +61,21 @@ form.formication {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis; }
-    form.formication .select.selectFocus {
+    form.formikation .select.selectFocus {
       border-color: #000; }
-      form.formication .select.selectFocus:after {
+      form.formikation .select.selectFocus:after {
         border-color: #000; }
-      form.formication .select.selectFocus .select-label {
+      form.formikation .select.selectFocus .select-label {
         color: #000; }
-    .field_with_errors form.formication .select {
+    .field_with_errors form.formikation .select {
       border-color: red; }
-      .field_with_errors form.formication .select:after {
+      .field_with_errors form.formikation .select:after {
         border-color: red; }
-      .field_with_errors form.formication .select .file-label {
+      .field_with_errors form.formikation .select .file-label {
         color: red; }
-  form.formication input[type=text],
-  form.formication input[type=password],
-  form.formication textarea {
+  form.formikation input[type=text],
+  form.formikation input[type=password],
+  form.formikation textarea {
     width: 100%;
     padding: 8px 4px;
     background: #fff;
@@ -87,9 +87,9 @@ form.formication {
     -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2);
     box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2); }
-    form.formication input[type=text]:focus,
-    form.formication input[type=password]:focus,
-    form.formication textarea:focus {
+    form.formikation input[type=text]:focus,
+    form.formikation input[type=password]:focus,
+    form.formikation textarea:focus {
       border-color: #000; }
 
 /*
@@ -97,7 +97,7 @@ form.formication {
   Themes & variants
   =====================================
 */
-form.formication.ue-theme {
+form.formikation.ue-theme {
   font: 400 14px/1.25 'Oswald', Arial, Helvetica, sans-serif;
   text-align: left;
   /* Label */
@@ -105,31 +105,31 @@ form.formication.ue-theme {
   /* Checks y radios */
   /* Campos de texto */
   /* Botón de enviar */ }
-  form.formication.ue-theme .row {
+  form.formikation.ue-theme .row {
     padding-bottom: 16px; }
-  form.formication.ue-theme form {
+  form.formikation.ue-theme form {
     padding: 16px; }
-  form.formication.ue-theme fieldset {
+  form.formikation.ue-theme fieldset {
     border: 1px solid #ccc;
     background: #f8f8f8;
     margin: 0;
     padding: 20px; }
-  form.formication.ue-theme label {
+  form.formikation.ue-theme label {
     padding-bottom: 8px;
     text-transform: uppercase; }
-  form.formication.ue-theme .select {
+  form.formikation.ue-theme .select {
     min-width: 250px;
     padding: 8px 15px 7px 4px;
     border: 1px solid #ccc;
     border-radius: 0; }
-    form.formication.ue-theme .select:after {
+    form.formikation.ue-theme .select:after {
       content: url("filter-arrow-double.png");
       display: block;
       float: right;
       padding: 8px 6px 7px 6px;
       margin: -7px -15px;
       border-left: 0; }
-    form.formication.ue-theme .select .select-label {
+    form.formikation.ue-theme .select .select-label {
       display: inline-block;
       margin: 0;
       padding: 0 30px 0 0;
@@ -138,23 +138,23 @@ form.formication.ue-theme {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis; }
-    form.formication.ue-theme .select.selectFocus {
+    form.formikation.ue-theme .select.selectFocus {
       border-color: #000; }
-      form.formication.ue-theme .select.selectFocus:after {
+      form.formikation.ue-theme .select.selectFocus:after {
         border-color: #000; }
-      form.formication.ue-theme .select.selectFocus .select-label {
+      form.formikation.ue-theme .select.selectFocus .select-label {
         color: #000; }
-    .field_with_errors form.formication.ue-theme .select {
+    .field_with_errors form.formikation.ue-theme .select {
       border-color: red; }
-      .field_with_errors form.formication.ue-theme .select:after {
+      .field_with_errors form.formikation.ue-theme .select:after {
         border-color: red; }
-      .field_with_errors form.formication.ue-theme .select .file-label {
+      .field_with_errors form.formikation.ue-theme .select .file-label {
         color: red; }
-  form.formication.ue-theme input[type=checkbox]:before, form.formication.ue-theme input[type=radio]:before {
+  form.formikation.ue-theme input[type=checkbox]:before, form.formikation.ue-theme input[type=radio]:before {
     background: url("formikation-sprite-ue-theme.png") no-repeat -1px 0; }
-  form.formication.ue-theme input[type=text],
-  form.formication.ue-theme input[type=password],
-  form.formication.ue-theme textarea {
+  form.formikation.ue-theme input[type=text],
+  form.formikation.ue-theme input[type=password],
+  form.formikation.ue-theme textarea {
     width: 100%;
     padding: 8px 4px;
     background: #fff;
@@ -164,11 +164,11 @@ form.formication.ue-theme {
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none; }
-    form.formication.ue-theme input[type=text]:focus,
-    form.formication.ue-theme input[type=password]:focus,
-    form.formication.ue-theme textarea:focus {
+    form.formikation.ue-theme input[type=text]:focus,
+    form.formikation.ue-theme input[type=password]:focus,
+    form.formikation.ue-theme textarea:focus {
       border-color: #000; }
-  form.formication.ue-theme input[type=submit] {
+  form.formikation.ue-theme input[type=submit] {
     min-width: 120px;
     height: auto;
     display: inline-block;
