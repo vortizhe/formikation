@@ -66,10 +66,10 @@
       $label.addClass('fk-radio');
     }
 
-    $el.on('update', function () {
-      var
+    $el.on('fk_update', function () {
+      /*var
         $el = $(this),
-        $label = $el.closest('label');
+        $label = $el.closest('label');*/
 
       if ($el.prop('checked')) {
         $(':radio[name="'+$el.attr('name')+'"]').closest('label').removeClass('checked');
@@ -80,10 +80,10 @@
     });
 
     $el.on('click', function() {
-      $el.trigger('update');
+      $el.trigger('fk_update');
     });
 
-    $el.trigger('update');
+    $el.trigger('fk_update');
   },
 
   // Process selects
