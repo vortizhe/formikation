@@ -66,26 +66,24 @@
       $label.addClass('fk-radio');
     }
 
-    $el.on('click', function() {
-      $el.trigger('update');
-    });
-
     $el.on('update', function () {
       var
-        $el = $(el),
+        $el = $(this),
         $label = $el.closest('label');
 
       if ($el.prop('checked')) {
+        $(':radio[name="'+$el.attr('name')+'"]').closest('label').removeClass('checked');
         $label.addClass('checked');
-        $(':radio[name="'+$el.attr('name')+'"]').not($el).trigger('update');
       } else {
         $label.removeClass('checked');
       }
     });
 
-    // if ($el.is(':radio')) {
+    $el.on('click', function() {
+      $el.trigger('update');
+    });
+
     $el.trigger('update');
-    // }
   },
 
   // Process selects

@@ -6,12 +6,6 @@
 */
 form.formication {
   /* Checks y radios */
-  /* input[type=radio] {
-    &:before {
-      background-position: -1px -20px;
-      visibility: visible;
-    }
-  } */
   /* Labels */
   /* Select tag */
   /* Select span */
@@ -20,22 +14,13 @@ form.formication {
     padding-top: 1px;
     margin: 0;
     padding: 0;
-    cursor: pointer;
-    /* &:before {
-      content: ' ';
-      display: inline-block;
-      width: 19px;
-      height: 20px;
-      margin-top: 3px;
-      background: url('formikation-sprite.png') no-repeat -1px 0;
-      visibility: visible;
-    } */ }
+    cursor: pointer; }
   form.formication label {
     display: inline-block;
     padding-right: 16px;
     cursor: pointer; }
     form.formication label.fk-radio:before, form.formication label.fk-check:before {
-      content: '';
+      content: ' ';
       display: inline-block;
       float: left;
       width: 19px;
@@ -45,8 +30,10 @@ form.formication {
     form.formication label.fk-radio:before {
       background-position: 0 -20px; }
     form.formication label.checked.fk-radio:before {
+      content: '';
       background-position: -21px -20px; }
     form.formication label.checked.fk-check:before {
+      content: '';
       background-position: -21px 0; }
     form.formication label input[type=radio]:before {
       background-position: -21px -20px; }

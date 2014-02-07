@@ -9,29 +9,11 @@ form.formication {
 
   /* Checks y radios */
   input[type=checkbox], input[type=radio] {
-    // width: 0px;
-    // height: 0px;
     padding-top: 1px;
     margin: 0;
     padding: 0;
     cursor: pointer;
-    // visibility: hidden;
-    /* &:before {
-      content: ' ';
-      display: inline-block;
-      width: 19px;
-      height: 20px;
-      margin-top: 3px;
-      background: url('formikation-sprite.png') no-repeat -1px 0;
-      visibility: visible;
-    } */
   }
-  /* input[type=radio] {
-    &:before {
-      background-position: -1px -20px;
-      visibility: visible;
-    }
-  } */
 
   /* Labels */
   label {
@@ -41,14 +23,13 @@ form.formication {
     &.fk-radio,
     &.fk-check {
       &:before {
-        content: '';
+        content: ' ';
         display: inline-block;
         float: left;
         width: 19px;
         height: 20px;
         margin: -1px 4px 0 0;
         background: url('formikation-sprite.png') no-repeat 0 0;
-        // visibility: visible;
       }
     }
     &.fk-radio {
@@ -59,11 +40,14 @@ form.formication {
     &.checked {
       &.fk-radio {
         &:before {
+          // IE8 does not render the changes in a :pseudo-element with we don't change the 'content', thus we change it from ' ' -> ''.
+          content: '';
           background-position: -21px -20px;
         }
       }
       &.fk-check {
         &:before {
+          content: '';
           background-position: -21px 0;
         }
       }
