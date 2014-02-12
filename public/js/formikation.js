@@ -163,8 +163,13 @@
   },
 
   // Process input file
-  processInputFile: function(sel) {
-    //
+  processInputFile: function(el) {
+    var div = $('<div class="fk-file-input">');
+    $(el).on('change', function(e) {
+      // e.preventDefault();
+      $(this).prev('p').html(filename);
+    });
+    $(el).wrap(div).parent().prepend('<p>Select file...</p>');
   },
 
   // Updates select width to match span

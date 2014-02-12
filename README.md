@@ -30,6 +30,16 @@ Los radiobutton y los checkboxes deben tener el `label` rodeándolos, de esta fo
       Label del checkbox
     </label>
 
+## Wrapper del file input
+
+Para estilar el file input se genera un `wrapper`alrededor que tiene este formato
+
+    <div class="fk-file-input">
+      <p>Select file...</p>
+      // Debajo el input original
+      <input type="file" name="sample-file-input" id="sample-file-input">
+    </div>
+
 ## Ejemplos de uso generales
 
 Se inicializa llamando a la función `formikation` directamente sobre un selector de Jquery de la siguiente forma:
