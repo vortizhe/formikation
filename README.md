@@ -16,6 +16,10 @@ Los elementos que procesa son:
 `formikation.css`  
 `formikation-sprite.png`
 
+### Demo / vista del index.html
+
+[Demo online](http://htmlpreview.github.io/?https://raw.github.com/vortizhe/formikation/master/public/index.html)
+
 ## Requerimientos de HTML
 
 Los radiobutton y los checkboxes deben tener el `label` rodeándolos, de esta forma:
