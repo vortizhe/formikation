@@ -1,4 +1,4 @@
-# formication
+# formikation
 ### Simple form beautifier
 
 *formikation* es un sencillo _embellecedor_ de formularios que emplea un sprite minísculo e intenta meter el mínimo HTML adicional posible para hacer los formularios bonitos. *Precisa JQuery*.
@@ -14,7 +14,7 @@ Los elementos que procesa son:
 `JQuery 1.9+`  
 `formikation.js`  
 `formikation.css`  
-`formikation-sprite.css`
+`formikation-sprite.png`
 
 ## Requerimientos de HTML
 
@@ -39,6 +39,16 @@ Para estilar el file input se genera un `wrapper`alrededor que tiene este format
       // Debajo el input original
       <input type="file" name="sample-file-input" id="sample-file-input">
     </div>
+
+## Aplicar los estilos de formikation
+
+Para que `formikation` pueda aplicar los estilos por defecto a tu formulario en form debe tener la clase `.formikation` asignada, de la siguiente forma:
+
+    <form accept-charset="UTF-8" action="#" class="formikation ue-theme" method="post">
+    ...
+    
+En el `index.html`  de ejemplo se incluyen 2 ejemplos de temas/estilos, **échales un ojo si quieres desarrollar tu propio tema**. Los estilos están en el fichero `formikation.css` (`formikation.scss` si prefieres usar SASS).
+
 
 ## Ejemplos de uso generales
 
