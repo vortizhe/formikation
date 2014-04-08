@@ -167,7 +167,11 @@
     var div = $('<div class="fk-file-input">');
     $(el).on('change', function(e) {
       // e.preventDefault();
-      $(this).prev('p').html(filename);
+      var fn = $(this).val().replace(/C:\\fakepath\\/i, '');
+      if (!fn) {
+        fn = 'Select file...';
+      }
+      $(this).prev('p').html(fn);
     });
     $(el).wrap(div).parent().prepend('<p>Select file...</p>');
   },
