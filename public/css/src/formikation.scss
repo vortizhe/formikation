@@ -1,13 +1,39 @@
-/*
-  ====================================
-  General formication styles
-  Modify with care!
-  =====================================
-*/
+//
+// ====================================
+// General formication styles
+// Modify with care!
+// =====================================
+//
+
+// vars
+
+$border_radius: 3px;
+
+$btn_color: red;
+
+// definition
 
 form.formikation {
 
-  /* Checks y radios */
+
+  // Generic button style
+  a.btn,
+  button.btn,
+  input[type=submit].btn {
+    padding: 8px 10px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+
+    background-color: $btn_color;
+    border-radius: $border_radius;
+  }
+
+  // Checks y radios
   input[type=checkbox], input[type=radio] {
     padding-top: 1px;
     margin: 0;
@@ -18,7 +44,7 @@ form.formikation {
     left: -9999px;
   }
 
-  /* Labels */
+  // Labels
   label {
     display: inline-block;
     padding-right: 16px;
@@ -62,20 +88,20 @@ form.formikation {
     }
   }
 
-  /* Select tag */
+  // Select tag
   select {
     // width: 100%; // Full width
     min-width: 250px;
   }
 
-  /* Select span */
-  .select {
+  // Select span
+  .fk-select {
     // width: 100%; // Full width
     min-width: 250px;
     padding: 8px 15px 4px 4px;
     border: 1px solid #ccc;
     background: #fff;
-    border-radius: 3px;
+    border-radius: $border_radius;
 
     &:after {
       content: url('../img/formikation-select-arrow.png');
@@ -85,7 +111,7 @@ form.formikation {
       margin: -8px -15px;
       border-left: 1px solid #CCC;
     }
-    .select-label {
+    .fk-select-label {
       display: inline-block;
       margin: 0;
       padding: 0 30px 0 0;
@@ -99,7 +125,7 @@ form.formikation {
     &.selectFocus {
       border-color: #000;
       &:after { border-color: #000; }
-      .select-label { color: #000; }
+      .fl-select-label { color: #000; }
     }
     .field_with_errors & {
       border-color: red;
@@ -108,7 +134,7 @@ form.formikation {
     }
   }
 
-  /* Campos de texto */
+  // Text fields
   input[type=text],
   input[type=password],
   textarea {
@@ -120,12 +146,9 @@ form.formikation {
     outline: 0;
 
     font-size: 14px;
-    border-radius: 3px;
+    border-radius: $border_radius;
     color: #333;
 
-    -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2);
-    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2);
     &:focus {
       border-color: #000;
     }
@@ -143,33 +166,28 @@ form.formikation {
     background: #fff;
     border: 1px solid #ccc;
     outline: 0;
-    border-radius: 0;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+    border-radius: $border_radius;
 
+    // Select file button
     &:after {
-      content: 'Elegir fichero';
+      content: 'Select file';
       display: block;
-      width:105px;
-      height:21px; /*24*/
+      height:31px;
       position: absolute;
       right: 3px;
       top: 3px;
 
-      padding: 10px 10px 0 10px;
+      padding: 6px 10px;
       border: 0;
       outline: 0;
       cursor: pointer;
 
-      font: 400 11px/1.25 'Oswald', Arial, Helvetica, sans-serif;
-      text-transform: uppercase;
       text-decoration: none;
       text-align: center;
       color: #fff;
 
-      background-color: #8f1b27;
-      border-radius: 3px;
+      background-color: $btn_color;
+      border-radius: $border_radius;
     }
     > p {
       margin: 0;
@@ -182,134 +200,10 @@ form.formikation {
       left: 0;
       top: 0;
       opacity: 0;
-      /* IE8 */
+      // IE8
       -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
       z-index: 3;
       cursor: pointer;
     }
   }
 }
-
-/*
-  ====================================
-  Themes & variants
-  =====================================
-*/
-
-form.formikation.ue-theme {
-
-  font: 400 14px/1.25 'Oswald', Arial, Helvetica, sans-serif;
-  text-align: left;
-
-  .row {
-    padding-bottom: 16px;
-  }
-
-  form {
-    padding: 16px;
-  }
-
-  fieldset {
-    border: 1px solid #ccc;
-    background: #f8f8f8;
-    margin: 0;
-    padding: 20px;
-  }
-
-  /* Label */
-  label {
-    padding-bottom: 8px;
-    text-transform: uppercase;
-  }
-
-  /* Select tag */
-  .select {
-    // width: 100%; // Full width
-    min-width: 250px;
-    padding: 8px 15px 7px 4px;
-    border: 1px solid #ccc;
-    border-radius: 0;
-
-    &:after {
-      content: url('../img/formikation-select-arrow-double.png');
-      display: block;
-      float: right;
-      padding: 8px 6px 7px 6px ;
-      margin: -7px -15px;
-      border-left: 0;
-    }
-    .select-label {
-      display: inline-block;
-      margin: 0;
-      padding: 0 30px 0 0;
-      color: #666;
-
-      max-width: 430px; // This set max width before ellipsis
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    &.selectFocus {
-      border-color: #000;
-      &:after { border-color: #000; }
-      .select-label { color: #000; }
-    }
-    .field_with_errors & {
-      border-color: red;
-      &:after { border-color: red; }
-      .file-label { color: red; }
-    }
-  }
-
-  /* Checks y radios */
-  label.fk-check,
-  label.fk-radio {
-    &:before {
-      background-image: url('../img/formikation-sprite.png');
-    }
-  }
-
-  /* Campos de texto */
-  input[type=text],
-  input[type=password],
-  textarea {
-    width: 100%;
-
-    padding: 8px 4px;
-    background: #fff;
-    border: 1px solid #ccc;
-    outline: 0;
-
-    border-radius: 0;
-
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    &:focus {
-      border-color: #000;
-    }
-  }
-
-  /* Botón de enviar */
-  input[type=submit] {
-    min-width: 120px;
-    height: auto;
-    display: inline-block;
-    position: relative;
-
-    padding: 0.95em 10px 1.05em 10px;
-    margin-right: 16px;
-    border: 0;
-    outline: 0;
-    cursor: pointer;
-
-    font: 400 14px/1.25 'Oswald', Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    text-decoration: none;
-    text-align: center;
-    color: #fff;
-
-    background-color: #8f1b27;
-    border-radius: 3px;
-    }
-  }

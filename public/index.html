@@ -22,89 +22,68 @@
   <link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
 
   <!--ESTILOS-->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.1.3/normalize.min.css"/>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css"/>
   <link rel="stylesheet" href="css/formikation.css">
+  <link rel="stylesheet" href="css/formikation-theme-ue.css">
+
+  <!-- ESTILES FOR THE DEMO -->
+  <style>
+
+    *, *:before, *:after {
+      -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    }
+
+    body {
+      padding: 20px;
+    }
+
+    form {
+      max-width: 650px;
+      margin-right: 20px;
+      padding: 0;
+      float: left;
+    }
+
+    fieldset {
+      padding: 20px;
+    }
+
+    .row {
+      padding-bottom: 8px;
+    }
+
+    .w100 {
+      width: 100%;
+    }
+
+  </style>
 
 </head>
 <body class="opA" id="www_dominio_com">
 
-  <form accept-charset="UTF-8" action="#" class="formikation ue-theme" id="new_open_day_inscription" method="post" novalidate="novalidate">
+
+  <form accept-charset="UTF-8" action="#" class="formikation" id="new_open_day_inscription" method="post" novalidate="novalidate">
     <fieldset>
-      <p>Por favor, indícanos</p>
+      <p>Basic clean styles</p>
       <div class="row">
-        <div class="col w50">
-          <input class="required itext" id="open_day_inscription_name" name="open_day_inscription[name]" placeholder="Nombre" size="30" type="text">
-        </div>
-        <div class="col w50 last">
-          <input class="required itext" id="open_day_inscription_last_name" name="open_day_inscription[last_name]" placeholder="Apellidos" size="30" type="text">
-        </div>
+        <input class="required itext" id="open_day_inscription_last_name" name="open_day_inscription[last_name]" placeholder="Apellidos" size="30" type="text">
       </div>
       <div class="row">
-        <div class="col w50">
-          <input class="itext required" id="open_day_inscription_phone" name="open_day_inscription[phone]" placeholder="Teléfono móvil" size="30" type="text">
-        </div>
-        <div class="col w50 last">
-          <input class="required itext" id="open_day_inscription_email" name="open_day_inscription[email]" placeholder="email" size="30" type="text">
-        </div>
+        <input class="itext required" id="open_day_inscription_phone" name="open_day_inscription[phone]" placeholder="Teléfono móvil" size="30" type="text">
       </div>
       <div class="row">
         <label for="state" class="w100">Provincia</label>
-        <select class="required itext full" id="state" name="state"><option value="A CORUÑA">A CORUÑA</option>
+        <select class="w100" id="state" name="state"><option value="A CORUÑA">A CORUÑA</option>
           <option value="ALAVA">ALAVA</option>
           <option value="ALBACETE">ALBACETE</option>
           <option value="ALICANTE">ALICANTE</option>
           <option value="ALMERIA">ALMERIA</option>
           <option value="ASTURIAS">ASTURIAS</option>
-          <option value="AVILA">AVILA</option>
-          <option value="BADAJOZ">BADAJOZ</option>
-          <option value="BALEARES">BALEARES</option>
-          <option value="BARCELONA">BARCELONA</option>
-          <option value="BURGOS">BURGOS</option>
-          <option value="CACERES">CACERES</option>
-          <option value="CADIZ">CADIZ</option>
-          <option value="CANTABRIA">CANTABRIA</option>
-          <option value="CASTELLON">CASTELLON</option>
-          <option value="CEUTA">CEUTA</option>
-          <option value="CIUDAD REAL">CIUDAD REAL</option>
-          <option value="CORDOBA">CORDOBA</option>
-          <option value="CUENCA">CUENCA</option>
-          <option value="GIRONA">GIRONA</option>
-          <option value="GRANADA">GRANADA</option>
-          <option value="GUADALAJARA">GUADALAJARA</option>
-          <option value="GUIPUZCOA">GUIPUZCOA</option>
-          <option value="HUELVA">HUELVA</option>
-          <option value="HUESCA">HUESCA</option>
-          <option value="JAEN">JAEN</option>
-          <option value="LA RIOJA">LA RIOJA</option>
-          <option value="LAS PALMAS">LAS PALMAS</option>
-          <option value="LEON">LEON</option>
-          <option value="LLEIDA">LLEIDA</option>
-          <option value="LUGO">LUGO</option>
-          <option value="MADRID">MADRID</option>
-          <option value="MALAGA">MALAGA</option>
-          <option value="MELILLA">MELILLA</option>
-          <option value="MURCIA">MURCIA</option>
-          <option value="NAVARRA">NAVARRA</option>
-          <option value="OURENSE">OURENSE</option>
-          <option value="PALENCIA">PALENCIA</option>
-          <option value="PONTEVEDRA">PONTEVEDRA</option>
-          <option value="SALAMANCA">SALAMANCA</option>
-          <option value="SANTA CRUZ">SANTA CRUZ</option>
-          <option value="SEGOVIA">SEGOVIA</option>
-          <option value="SEVILLA">SEVILLA</option>
-          <option value="SORIA">SORIA</option>
-          <option value="TARRAGONA">TARRAGONA</option>
-          <option value="TERUEL">TERUEL</option>
-          <option value="TOLEDO">TOLEDO</option>
-          <option value="VALENCIA">VALENCIA</option>
-          <option value="VALLADOLID">VALLADOLID</option>
-          <option value="VIZCAYA">VIZCAYA</option>
-          <option value="ZAMORA">ZAMORA</option>
-          <option value="ZARAGOZA">ZARAGOZA</option></select>
+          <option value="AVILA">AVILA</option></select>
         </div>
         <div class="row">
           <label for="city" class="w100">Ciudad</label>
-          <select class="required itext full" id="city" name="city"><option>A CORUÑA</option><option>AMES</option><option>ARTEIXO</option><option>ARZUA</option><option>AS PONTES DE GARCIA RODRIGUEZ</option><option>BAIO</option><option>BERTAMIRANS</option><option>BETANZOS</option><option>BOIRO</option><option>CAMBRE</option><option>CARBALLO</option><option>CARIÑO</option><option>CEDEIRA</option><option>CEE</option><option>CORUÑA, A</option><option>CORUÑA</option><option>CULLEREDO (SANTO ESTEVO)</option><option>CULLEREDO</option><option>CURTIS</option><option>EL CARBAYO-NOS-OLEIROS</option><option>EL FERROL DEL CAUDILLO</option><option>FEANS (MESOIRO)</option><option>FENE</option><option>FERROL</option><option>Ferrol - Coruña</option><option>LA CORUÑA</option><option>LARACHA</option><option>La Coruña</option><option>MELLIDE</option><option>MONTOUTO (TEO)</option><option>MUGARDOS</option><option>MUROS</option><option>NARON</option><option>NEDA</option><option>NEGREIRA</option><option>NOIA</option><option>NOYA</option><option>OLEIROS-PERILLO</option><option>OLEIROS</option><option>ORDES</option><option>ORTIGUEIRA</option><option>PADRON</option><option>PONTECESO</option><option>PONTEDEUME</option><option>PUEBLA DEL CARAMIÑAL</option><option>RIANXO</option><option>RIBEIRA (FRIONS)</option><option>RIBEIRA</option><option>RUTIS- CULLEDERO</option><option>SADA</option><option>SAN PEDRO DE LEIXA (FERROL)</option><option>SANTA COMBA</option><option>SANTIAGO DE COMPOSTELA</option><option>Santiago de Compostela- Coruña</option><option>TEO</option><option>TOMELLOSO</option><option>VIDUIDO DE ARRIBA-AMES</option><option>VIMIANZO</option><option>coruña</option></select>
+          <select class="required itext full" id="city" name="city"><option>A CORUÑA</option><option>AMES</option><option>ARTEIXO</option><option>ARZUA</option><option>AS PONTES DE GARCIA RODRIGUEZ</option><option>BAIO</option><option>BERTAMIRANS</option><option>BETANZOS</option><option>BOIRO</option><option>CAMBRE</option><option>CARBALLO</option></select>
         </div>
         <div class="row">
           <label for="zipcode" class="w100">Código Postal</label>
@@ -122,59 +101,168 @@
             <option value="3">3</option></select>
           </div>
           <div class="row shaded">
-            <label id="open-day-label"><input checked="checked" id="open_day_inscription_student_attending" name="open_day_inscription[student_attending]" type="checkbox" value="1"> ¿Asistirá estudiante?</label>
+            <label id="open-day-label" class="fk-check">
+              <input checked="checked" id="open_day_inscription_student_attending" name="open_day_inscription[student_attending]" type="checkbox" value="1"> ¿Asistirá estudiante?
+            </label>
           </div>
           <div class="row shaded">
-            <label><input id="open_day_inscription_parents_attending" name="open_day_inscription[parents_attending]" type="checkbox" value="1"> ¿Asistirán padres estudiante?</label>
+            <label class="fk-check">
+              <input id="open_day_inscription_parents_attending" name="open_day_inscription[parents_attending]" type="checkbox" value="1"> ¿Asistirán padres estudiante?
+            </label>
           </div>
           <div class="row">
             <input class="required itext full" id="open_day_inscription_degree_name" name="open_day_inscription[degree_name]" placeholder="Titulación en la que estás interesado" size="30" type="text">
           </div>
-          <div class="row">
-            <input class="enviar upper fr" type="submit" value="Inscribirme">
-            <label class="fk-check aviso-legal">
-              <input checked="checked" id="open_day_inscription_legal_agreement" name="open_day_inscription[legal_agreement]" type="checkbox" value="1">
-              <a href="/#TB_inline?height=520&amp;width=680&amp;inlineId=tb_aviso_legal" class="thickbox">Aviso legal</a>
-            </label>
-          </div>
+
           <div class="row">
             <label for="sample-textarea" class="w100">Ejemplo de textarea</label>
-            <textarea name="sample-textarea" id="sample-textarea" cols="30" rows="10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, aliquam, labore molestias incidunt obcaecati sapiente molestiae perspiciatis vitae ipsum possimus iure ratione fuga quae nobis eaque. Ea, beatae provident quos repellendus obcaecati. Minus, distinctio, ducimus nobis maxime quam a odio pariatur blanditiis totam animi impedit illo iusto excepturi sapiente voluptate? Nulla, totam, obcaecati fugit in debitis quo doloremque ut sunt cum vitae voluptatibus mollitia ea aliquid. Excepturi, molestiae dolore amet nostrum laboriosam cumque eligendi qui at. Sapiente harum enim accusamus.</textarea>
+            <textarea name="sample-textarea" id="sample-textarea" cols="30" rows="10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, aliquam, labore molestias incidunt obcaecati sapiente molestiae perspiciatis.</textarea>
           </div>
           <div class="row">
             <label for="sample-file-input" class="w100">Ejemplo de file input</label>
             <input type="file" name="sample-file-input" id="sample-file-input">
           </div>
           <div class="row">
-            <label class="radio">
+            <label class="fk-radio">
               <input type="radio" name="primero" id="">
               Radio 1
             </label>
-            <label class="radio">
+            <label class="fk-radio">
               <input type="radio" name="primero" id="">
               Radio 2
             </label>
-            <label class="radio">
+            <label class="fk-radio">
               <input type="radio" name="primero" id="">
               Radio 2
             </label>
           </div>
           <div class="row">
-            <label class="w100 radio">
+            <label class="w100 fk-radio">
               <input type="radio" name="segundo" id="" checked >
               Radio 1
             </label>
-            <label class="w100 radio">
+            <label class="w100 fk-radio">
               <input type="radio" name="segundo" id="">
               Radio 2
             </label>
-            <label class="w100 radio">
+            <label class="w100 fk-radio">
               <input type="radio" name="segundo" id="">
               Radio 2
             </label>
           </div>
+          <div class="row">
+            <label class="fk-check aviso-legal">
+              <input checked="checked" id="open_day_inscription_legal_agreement" name="open_day_inscription[legal_agreement]" type="checkbox" value="1">Leer nuestro
+              <a href="/#TB_inline?height=520&amp;width=680&amp;inlineId=tb_aviso_legal" class="thickbox">Aviso legal</a>
+            </label>
+          </div>
+          <div class="row">
+            <input class="btn" type="submit" value="Inscribirme">
+          </div>
         </fieldset>
       </form>
+
+      <!-- SAMPLE THEME: UE -->
+      <form accept-charset="UTF-8" action="#" class="formikation theme-ue" id="new_open_day_inscription" method="post" novalidate="novalidate">
+        <fieldset>
+          <p>UE Sample theme</p>
+          <div class="row">
+            <input class="required itext" id="open_day_inscription_last_name" name="open_day_inscription[last_name]" placeholder="Apellidos" size="30" type="text">
+          </div>
+          <div class="row">
+            <input class="itext required" id="open_day_inscription_phone" name="open_day_inscription[phone]" placeholder="Teléfono móvil" size="30" type="text">
+          </div>
+          <div class="row">
+            <label for="state" class="w100">Provincia</label>
+            <select class="w100" id="state" name="state"><option value="A CORUÑA">A CORUÑA</option>
+              <option value="ALAVA">ALAVA</option>
+              <option value="ALBACETE">ALBACETE</option>
+              <option value="ALICANTE">ALICANTE</option>
+              <option value="ALMERIA">ALMERIA</option>
+              <option value="ASTURIAS">ASTURIAS</option>
+              <option value="AVILA">AVILA</option></select>
+            </div>
+            <div class="row">
+              <label for="city" class="w100">Ciudad</label>
+              <select class="required itext full" id="city" name="city"><option>A CORUÑA</option><option>AMES</option><option>ARTEIXO</option><option>ARZUA</option><option>AS PONTES DE GARCIA RODRIGUEZ</option><option>BAIO</option><option>BERTAMIRANS</option><option>BETANZOS</option><option>BOIRO</option><option>CAMBRE</option><option>CARBALLO</option></select>
+            </div>
+            <div class="row">
+              <label for="zipcode" class="w100">Código Postal</label>
+              <select class="required itext full" id="zipcode" name="zipcode"><option>15001</option><option>15002</option><option>15003</option><option>15004</option><option>15006</option><option>15008</option><option>15009</option><option>15011</option></select>
+            </div>
+
+            <div class="row">
+              <label for="pen_day_inscription" class="w100">Colegio</label>
+              <select id="open_day_inscription_school" name="open_day_inscription[school]"><option value="1114">LA GRANDE OBRA DE ATOCHA.</option><option value="1127">SANTO DOMINGO</option><option value="4044">RIAS ALTAS</option><option value="50660">ESCUELA DE ARTE PABLO PICASSO</option><option value="xxxx">ESCUELA DE ARTE PABLO PICASSO MUY MUY MUY MUY MUY LARGO </option></select>
+            </div>
+            <div class="row">
+              <label for="open_day_inscription_attendees_number" class="w100">Nº Asistentes</label>
+              <select id="open_day_inscription_attendees_number" name="open_day_inscription[attendees_number]"><option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option></select>
+              </div>
+              <div class="row shaded">
+                <label id="open-day-label" class="fk-check">
+                  <input checked="checked" id="open_day_inscription_student_attending" name="open_day_inscription[student_attending]" type="checkbox" value="1"> ¿Asistirá estudiante?
+                </label>
+              </div>
+              <div class="row shaded">
+                <label class="fk-check">
+                  <input id="open_day_inscription_parents_attending" name="open_day_inscription[parents_attending]" type="checkbox" value="1"> ¿Asistirán padres estudiante?
+                </label>
+              </div>
+              <div class="row">
+                <input class="required itext full" id="open_day_inscription_degree_name" name="open_day_inscription[degree_name]" placeholder="Titulación en la que estás interesado" size="30" type="text">
+              </div>
+
+              <div class="row">
+                <label for="sample-textarea" class="w100">Ejemplo de textarea</label>
+                <textarea name="sample-textarea" id="sample-textarea" cols="30" rows="10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, aliquam, labore molestias incidunt obcaecati sapiente molestiae perspiciatis.</textarea>
+              </div>
+              <div class="row">
+                <label for="sample-file-input" class="w100">Ejemplo de file input</label>
+                <input type="file" name="sample-file-input" id="sample-file-input">
+              </div>
+              <div class="row">
+                <label class="fk-radio">
+                  <input type="radio" name="primero" id="">
+                  Radio 1
+                </label>
+                <label class="fk-radio">
+                  <input type="radio" name="primero" id="">
+                  Radio 2
+                </label>
+                <label class="fk-radio">
+                  <input type="radio" name="primero" id="">
+                  Radio 2
+                </label>
+              </div>
+              <div class="row">
+                <label class="w100 fk-radio">
+                  <input type="radio" name="segundo" id="" checked >
+                  Radio 1
+                </label>
+                <label class="w100 fk-radio">
+                  <input type="radio" name="segundo" id="">
+                  Radio 2
+                </label>
+                <label class="w100 fk-radio">
+                  <input type="radio" name="segundo" id="">
+                  Radio 2
+                </label>
+              </div>
+              <div class="row">
+                <label class="fk-check aviso-legal">
+                  <input checked="checked" id="open_day_inscription_legal_agreement" name="open_day_inscription[legal_agreement]" type="checkbox" value="1">Leer nuestro
+                  <a href="/#TB_inline?height=520&amp;width=680&amp;inlineId=tb_aviso_legal" class="thickbox">Aviso legal</a>
+                </label>
+              </div>
+              <div class="row">
+                <input class="btn" type="submit" value="Inscribirme">
+              </div>
+            </fieldset>
+          </form>
+
 
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
       <script src="js/formikation.min.js"></script>

@@ -1,0 +1,32 @@
+form.formikation.theme-ue {
+  font: 400 14px/1.25 'Oswald', Arial, Helvetica, sans-serif;
+  text-align: left; }
+  form.formikation.theme-ue fieldset {
+    border: 1px solid #ccc;
+    background: #f8f8f8; }
+  form.formikation.theme-ue a.btn, form.formikation.theme-ue button.btn, form.formikation.theme-ue input[type=submit].btn {
+    padding: 0.95em 20px 1.05em 20px;
+    background-color: #8f1b27;
+    border-radius: 0px;
+    text-transform: uppercase;
+    color: #fff; }
+  form.formikation.theme-ue label {
+    padding-bottom: 8px;
+    text-transform: uppercase; }
+  form.formikation.theme-ue .fk-select {
+    width: 100%;
+    padding: 8px 15px 7px 4px;
+    border: 1px solid #ccc;
+    border-radius: 0px; }
+    form.formikation.theme-ue .fk-select:after {
+      content: url('../img/formikation-select-arrow-double.png');
+      padding: 8px 6px 7px 6px;
+      margin: -7px -15px;
+      border-left: 0; }
+  form.formikation.theme-ue input[type=text], form.formikation.theme-ue input[type=password], form.formikation.theme-ue textarea {
+    border-radius: 0px; }
+  form.formikation.theme-ue .fk-file-input {
+    border-radius: 0px; }
+    form.formikation.theme-ue .fk-file-input:after {
+      background-color: #8f1b27;
+      border-radius: 0px; }

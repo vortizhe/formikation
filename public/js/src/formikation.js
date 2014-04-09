@@ -6,8 +6,8 @@
     Collaborators:
     Carlos Cabo @putuko
 
-  V.0.1 (2014/01/20)
-  http://github.com
+  V.0.2 (2014/04/09)
+  git@github.com:vortizhe/formikation.git
 
 */
 
@@ -89,10 +89,10 @@
   // Process selects
   processSelects: function(el) {
     var
-     $el = $(el),
-      selectInnerSpan = $('<span />').addClass(this.getClass($el, '-label')),
+      $el = $(el),
+      selectInnerSpan = $('<span />').addClass('fk-select-label'),
       selectSpan = $('<span />'),
-      prefix = ($el.is('input:file')) ? 'file' : 'select';
+      prefix = 'fk-select';
 
     $el.after(selectSpan.append(selectInnerSpan));
 
@@ -107,10 +107,8 @@
 
     $el.addClass('hasCustomSelect')
     .on('update', function () {
-
       formikation.changed($el,selectSpan);
       formikation.updateSelectWH($el);
-
     })
     .on('change', function () {
         selectSpan.addClass(formikation.getClass($el, 'Changed'));

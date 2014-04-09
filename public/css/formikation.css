@@ -1,230 +1,127 @@
-/*
-  ====================================
-  General formication styles
-  Modify with care!
-  =====================================
-*/
-form.formikation {
-  /* Checks y radios */
-  /* Labels */
-  /* Select tag */
-  /* Select span */
-  /* Campos de texto */ }
-  form.formikation input[type=checkbox], form.formikation input[type=radio] {
-    padding-top: 1px;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-    position: absolute;
-    left: -9999px; }
-  form.formikation label {
+form.formikation a.btn, form.formikation button.btn, form.formikation input[type=submit].btn {
+  padding: 8px 10px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  background-color: red;
+  border-radius: 3px; }
+form.formikation input[type=checkbox], form.formikation input[type=radio] {
+  padding-top: 1px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  left: -9999px; }
+form.formikation label {
+  display: inline-block;
+  padding-right: 16px;
+  cursor: pointer; }
+  form.formikation label.fk-radio:before, form.formikation label.fk-check:before {
+    content: ' ';
     display: inline-block;
-    padding-right: 16px;
-    cursor: pointer; }
-    form.formikation label.fk-radio:before, form.formikation label.fk-check:before {
-      content: ' ';
-      display: inline-block;
-      float: left;
-      width: 19px;
-      height: 20px;
-      margin: -1px 4px 0 0;
-      background: url('../img/formikation-sprite.png') no-repeat 0 0; }
-    form.formikation label.fk-radio:before {
-      background-position: 0 -20px; }
-    form.formikation label.checked.fk-radio:before {
-      content: '';
-      background-position: -21px -20px; }
-    form.formikation label.checked.fk-check:before {
-      content: '';
-      background-position: -21px 0; }
-    form.formikation label input[type=radio]:before {
-      background-position: -21px -20px; }
-  form.formikation select {
-    min-width: 250px; }
-  form.formikation .select {
-    min-width: 250px;
-    padding: 8px 15px 4px 4px;
-    border: 1px solid #ccc;
-    background: #fff;
-    border-radius: 3px; }
-    form.formikation .select:after {
-      content: url('../img/formikation-select-arrow.png');
-      display: block;
-      float: right;
-      padding: 8px 12px;
-      margin: -8px -15px;
-      border-left: 1px solid #CCC; }
-    form.formikation .select .select-label {
-      display: inline-block;
-      margin: 0;
-      padding: 0 30px 0 0;
-      color: #666;
-      max-width: 430px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis; }
-    form.formikation .select.selectFocus {
-      border-color: #000; }
-      form.formikation .select.selectFocus:after {
-        border-color: #000; }
-      form.formikation .select.selectFocus .select-label {
-        color: #000; }
-    .field_with_errors form.formikation .select {
-      border-color: red; }
-      .field_with_errors form.formikation .select:after {
-        border-color: red; }
-      .field_with_errors form.formikation .select .file-label {
-        color: red; }
-  form.formikation input[type=text], form.formikation input[type=password], form.formikation textarea {
-    width: 100%;
-    padding: 8px 4px;
-    background: #fff;
-    border: 1px solid #ccc;
-    outline: 0;
-    font-size: 14px;
-    border-radius: 3px;
-    color: #333;
-    -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2);
-    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2); }
-    form.formikation input[type=text]:focus, form.formikation input[type=password]:focus, form.formikation textarea:focus {
-      border-color: #000; }
-  form.formikation .fk-file-input {
-    width: 94%;
-    height: 39px;
+    float: left;
+    width: 19px;
+    height: 20px;
+    margin: -1px 4px 0 0;
+    background: url('../img/formikation-sprite.png') no-repeat 0 0; }
+  form.formikation label.fk-radio:before {
+    background-position: 0 -20px; }
+  form.formikation label.checked.fk-radio:before {
+    content: '';
+    background-position: -21px -20px; }
+  form.formikation label.checked.fk-check:before {
+    content: '';
+    background-position: -21px 0; }
+  form.formikation label input[type=radio]:before {
+    background-position: -21px -20px; }
+form.formikation select {
+  min-width: 250px; }
+form.formikation .fk-select {
+  min-width: 250px;
+  padding: 8px 15px 4px 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 3px; }
+  form.formikation .fk-select:after {
+    content: url('../img/formikation-select-arrow.png');
     display: block;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    padding: 8px 4px;
-    background: #fff;
-    border: 1px solid #ccc;
-    outline: 0;
-    border-radius: 0;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none; }
-    form.formikation .fk-file-input:after {
-      content: 'Elegir fichero';
-      display: block;
-      width: 105px;
-      height: 21px;
-      /*24*/
-      position: absolute;
-      right: 3px;
-      top: 3px;
-      padding: 10px 10px 0 10px;
-      border: 0;
-      outline: 0;
-      cursor: pointer;
-      font: 400 11px/1.25 'Oswald', Arial, Helvetica, sans-serif;
-      text-transform: uppercase;
-      text-decoration: none;
-      text-align: center;
-      color: #fff;
-      background-color: #8f1b27;
-      border-radius: 3px; }
-    form.formikation .fk-file-input > p {
-      margin: 0;
-      padding: 0px 0 0 8px !important; }
-    form.formikation .fk-file-input input[type=file] {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      left: 0;
-      top: 0;
-      opacity: 0;
-      /* IE8 */
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-      z-index: 3;
-      cursor: pointer; }
-
-/*
-  ====================================
-  Themes & variants
-  =====================================
-*/
-form.formikation.ue-theme {
-  font: 400 14px/1.25 'Oswald', Arial, Helvetica, sans-serif;
-  text-align: left;
-  /* Label */
-  /* Select tag */
-  /* Checks y radios */
-  /* Campos de texto */
-  /* Botón de enviar */ }
-  form.formikation.ue-theme .row {
-    padding-bottom: 16px; }
-  form.formikation.ue-theme form {
-    padding: 16px; }
-  form.formikation.ue-theme fieldset {
-    border: 1px solid #ccc;
-    background: #f8f8f8;
-    margin: 0;
-    padding: 20px; }
-  form.formikation.ue-theme label {
-    padding-bottom: 8px;
-    text-transform: uppercase; }
-  form.formikation.ue-theme .select {
-    min-width: 250px;
-    padding: 8px 15px 7px 4px;
-    border: 1px solid #ccc;
-    border-radius: 0; }
-    form.formikation.ue-theme .select:after {
-      content: url('../img/formikation-select-arrow-double.png');
-      display: block;
-      float: right;
-      padding: 8px 6px 7px 6px;
-      margin: -7px -15px;
-      border-left: 0; }
-    form.formikation.ue-theme .select .select-label {
-      display: inline-block;
-      margin: 0;
-      padding: 0 30px 0 0;
-      color: #666;
-      max-width: 430px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis; }
-    form.formikation.ue-theme .select.selectFocus {
-      border-color: #000; }
-      form.formikation.ue-theme .select.selectFocus:after {
-        border-color: #000; }
-      form.formikation.ue-theme .select.selectFocus .select-label {
-        color: #000; }
-    .field_with_errors form.formikation.ue-theme .select {
-      border-color: red; }
-      .field_with_errors form.formikation.ue-theme .select:after {
-        border-color: red; }
-      .field_with_errors form.formikation.ue-theme .select .file-label {
-        color: red; }
-  form.formikation.ue-theme label.fk-check:before, form.formikation.ue-theme label.fk-radio:before {
-    background-image: url('../img/formikation-sprite.png'); }
-  form.formikation.ue-theme input[type=text], form.formikation.ue-theme input[type=password], form.formikation.ue-theme textarea {
-    width: 100%;
-    padding: 8px 4px;
-    background: #fff;
-    border: 1px solid #ccc;
-    outline: 0;
-    border-radius: 0;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none; }
-    form.formikation.ue-theme input[type=text]:focus, form.formikation.ue-theme input[type=password]:focus, form.formikation.ue-theme textarea:focus {
-      border-color: #000; }
-  form.formikation.ue-theme input[type=submit] {
-    min-width: 120px;
-    height: auto;
+    float: right;
+    padding: 8px 12px;
+    margin: -8px -15px;
+    border-left: 1px solid #CCC; }
+  form.formikation .fk-select .fk-select-label {
     display: inline-block;
-    position: relative;
-    padding: 0.95em 10px 1.05em 10px;
-    margin-right: 16px;
+    margin: 0;
+    padding: 0 30px 0 0;
+    color: #666;
+    max-width: 430px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  form.formikation .fk-select.selectFocus {
+    border-color: #000; }
+    form.formikation .fk-select.selectFocus:after {
+      border-color: #000; }
+    form.formikation .fk-select.selectFocus .fl-select-label {
+      color: #000; }
+  .field_with_errors form.formikation .fk-select {
+    border-color: red; }
+    .field_with_errors form.formikation .fk-select:after {
+      border-color: red; }
+    .field_with_errors form.formikation .fk-select .file-label {
+      color: red; }
+form.formikation input[type=text], form.formikation input[type=password], form.formikation textarea {
+  width: 100%;
+  padding: 8px 4px;
+  background: #fff;
+  border: 1px solid #ccc;
+  outline: 0;
+  font-size: 14px;
+  border-radius: 3px;
+  color: #333; }
+  form.formikation input[type=text]:focus, form.formikation input[type=password]:focus, form.formikation textarea:focus {
+    border-color: #000; }
+form.formikation .fk-file-input {
+  width: 94%;
+  height: 39px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 8px 4px;
+  background: #fff;
+  border: 1px solid #ccc;
+  outline: 0;
+  border-radius: 3px; }
+  form.formikation .fk-file-input:after {
+    content: 'Select file';
+    display: block;
+    height: 31px;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    padding: 6px 10px;
     border: 0;
     outline: 0;
     cursor: pointer;
-    font: 400 14px/1.25 'Oswald', Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
     text-decoration: none;
     text-align: center;
     color: #fff;
-    background-color: #8f1b27;
+    background-color: red;
     border-radius: 3px; }
+  form.formikation .fk-file-input > p {
+    margin: 0;
+    padding: 0px 0 0 8px !important; }
+  form.formikation .fk-file-input input[type=file] {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    z-index: 3;
+    cursor: pointer; }
