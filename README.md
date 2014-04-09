@@ -24,12 +24,12 @@ Los elementos que procesa son:
 
 Los radiobutton y los checkboxes deben tener el `label` rodeándolos, de esta forma:
 
-    <label>
+    <label class="fk-check">
       <input type="checkbox" name="check" id="check">
       Label del checkbox
     </label>
     
-    <label>
+    <label class="fk-radio">
       <input type="radio" name="radio" id="radio">
       Label del checkbox
     </label>
