@@ -16,7 +16,7 @@ module.exports = function(grunt) {
           style: 'compressed'
         },
         files: {
-          'public/css/src/formikation.scss': 'public/css/formikation.css'
+          'public/css/formikation.css': 'public/css/src/formikation.scss'
         }
       }
     },

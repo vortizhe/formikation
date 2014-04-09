@@ -28,7 +28,7 @@ form.formikation {
       width: 19px;
       height: 20px;
       margin: -1px 4px 0 0;
-      background: url("formikation-sprite.png") no-repeat 0 0; }
+      background: url('../img/formikation-sprite.png') no-repeat 0 0; }
     form.formikation label.fk-radio:before {
       background-position: 0 -20px; }
     form.formikation label.checked.fk-radio:before {
@@ -48,7 +48,7 @@ form.formikation {
     background: #fff;
     border-radius: 3px; }
     form.formikation .select:after {
-      content: url("filter-arrow.png");
+      content: url('../img/formikation-select-arrow.png');
       display: block;
       float: right;
       padding: 8px 12px;
@@ -75,9 +75,7 @@ form.formikation {
         border-color: red; }
       .field_with_errors form.formikation .select .file-label {
         color: red; }
-  form.formikation input[type=text],
-  form.formikation input[type=password],
-  form.formikation textarea {
+  form.formikation input[type=text], form.formikation input[type=password], form.formikation textarea {
     width: 100%;
     padding: 8px 4px;
     background: #fff;
@@ -89,9 +87,7 @@ form.formikation {
     -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2);
     box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2); }
-    form.formikation input[type=text]:focus,
-    form.formikation input[type=password]:focus,
-    form.formikation textarea:focus {
+    form.formikation input[type=text]:focus, form.formikation input[type=password]:focus, form.formikation textarea:focus {
       border-color: #000; }
   form.formikation .fk-file-input {
     width: 94%;
@@ -174,7 +170,7 @@ form.formikation.ue-theme {
     border: 1px solid #ccc;
     border-radius: 0; }
     form.formikation.ue-theme .select:after {
-      content: url("filter-arrow-double.png");
+      content: url('../img/formikation-select-arrow-double.png');
       display: block;
       float: right;
       padding: 8px 6px 7px 6px;
@@ -201,12 +197,9 @@ form.formikation.ue-theme {
         border-color: red; }
       .field_with_errors form.formikation.ue-theme .select .file-label {
         color: red; }
-  form.formikation.ue-theme label.fk-check:before,
-  form.formikation.ue-theme label.fk-radio:before {
-    background-image: url("formikation-sprite-ue-theme.png"); }
-  form.formikation.ue-theme input[type=text],
-  form.formikation.ue-theme input[type=password],
-  form.formikation.ue-theme textarea {
+  form.formikation.ue-theme label.fk-check:before, form.formikation.ue-theme label.fk-radio:before {
+    background-image: url('../img/formikation-sprite.png'); }
+  form.formikation.ue-theme input[type=text], form.formikation.ue-theme input[type=password], form.formikation.ue-theme textarea {
     width: 100%;
     padding: 8px 4px;
     background: #fff;
@@ -216,9 +209,7 @@ form.formikation.ue-theme {
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none; }
-    form.formikation.ue-theme input[type=text]:focus,
-    form.formikation.ue-theme input[type=password]:focus,
-    form.formikation.ue-theme textarea:focus {
+    form.formikation.ue-theme input[type=text]:focus, form.formikation.ue-theme input[type=password]:focus, form.formikation.ue-theme textarea:focus {
       border-color: #000; }
   form.formikation.ue-theme input[type=submit] {
     min-width: 120px;

@@ -32,7 +32,7 @@ form.formikation {
         width: 19px;
         height: 20px;
         margin: -1px 4px 0 0;
-        background: url('formikation-sprite.png') no-repeat 0 0;
+        background: url('../img/formikation-sprite.png') no-repeat 0 0;
       }
     }
     &.fk-radio {
@@ -78,7 +78,7 @@ form.formikation {
     border-radius: 3px;
 
     &:after {
-      content: url('filter-arrow.png');
+      content: url('../img/formikation-select-arrow.png');
       display: block;
       float: right;
       padding: 8px 12px;
@@ -231,7 +231,7 @@ form.formikation.ue-theme {
     border-radius: 0;
 
     &:after {
-      content: url('filter-arrow-double.png');
+      content: url('../img/formikation-select-arrow-double.png');
       display: block;
       float: right;
       padding: 8px 6px 7px 6px ;
@@ -265,7 +265,7 @@ form.formikation.ue-theme {
   label.fk-check,
   label.fk-radio {
     &:before {
-      background-image: url('formikation-sprite-ue-theme.png');
+      background-image: url('../img/formikation-sprite.png');
     }
   }
 
