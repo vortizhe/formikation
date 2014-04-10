@@ -105,7 +105,7 @@
       selectSpan.attr('style', $el.attr('style'));
     }
 
-    $el.addClass('hasCustomSelect')
+    $el.addClass('has-fk-select')
     .on('update', function () {
       formikation.changed($el,selectSpan);
       formikation.updateSelectWH($el);
@@ -147,15 +147,15 @@
       }
     })
     .focus(function () {
-      selectSpan.removeClass(formikation.getClass($el, 'Changed')).addClass(formikation.getClass($el, 'Focus'));
+      selectSpan.removeClass(formikation.getClass($el, '-changed')).addClass(formikation.getClass($el, '-focus'));
     })
     .blur(function () {
-      selectSpan.removeClass(formikation.getClass($el, 'Focus')+' '+formikation.getClass($el, 'Open'));
+      selectSpan.removeClass(formikation.getClass($el, '-focus')+' '+formikation.getClass($el, '-open'));
     })
     .hover(function () {
-      selectSpan.addClass(formikation.getClass($el, 'Hover'));
+      selectSpan.addClass(formikation.getClass($el, '-hover'));
     }, function () {
-      selectSpan.removeClass(formikation.getClass($el, 'Hover'));
+      selectSpan.removeClass(formikation.getClass($el, '-hover'));
     })
     .trigger('update');
   },
@@ -208,7 +208,7 @@
   // HELPERS FUNCTIONS UTILITIES ================
   // Returns class depending on type adding suffix
   getClass: function(el, suffix){
-    var prefix = (el.is('input:file')) ? 'file' : 'select';
+    var prefix = (el.is('input:file')) ? 'fk-file' : 'fk-select';
     return prefix + suffix;
   },
 
@@ -221,9 +221,9 @@
     selectSpanInner.html(html);
 
     if (currentSelected.attr('disabled')) {
-      selectSpan.addClass(getClass($el, 'DisabledOption'));
+      selectSpan.addClass(getClass($el, 'fk-disable-option'));
     } else {
-      selectSpan.removeClass(formikation.getClass($el, 'DisabledOption'));
+      selectSpan.removeClass(formikation.getClass($el, 'fk-disable-option'));
     }
 
     setTimeout(function() {

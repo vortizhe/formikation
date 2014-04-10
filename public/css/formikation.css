@@ -61,11 +61,11 @@ form.formikation .fk-select {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; }
-  form.formikation .fk-select.selectFocus {
+  form.formikation .fk-select.fk-select-focus {
     border-color: #000; }
-    form.formikation .fk-select.selectFocus:after {
+    form.formikation .fk-select.fk-select-focus:after {
       border-color: #000; }
-    form.formikation .fk-select.selectFocus .fl-select-label {
+    form.formikation .fk-select.fk-select-focus .fl-select-label {
       color: #000; }
   .field_with_errors form.formikation .fk-select {
     border-color: red; }

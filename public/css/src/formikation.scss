@@ -122,11 +122,12 @@ form.formikation {
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    &.selectFocus {
+    &.fk-select-focus {
       border-color: #000;
       &:after { border-color: #000; }
       .fl-select-label { color: #000; }
     }
+    // From Parsley
     .field_with_errors & {
       border-color: red;
       &:after { border-color: red; }
