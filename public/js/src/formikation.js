@@ -67,12 +67,9 @@
     }
 
     $el.on('fk_update', function () {
-      /*var
-        $el = $(this),
-        $label = $el.closest('label');*/
 
       if ($el.prop('checked')) {
-        $(':radio[name="'+$el.attr('name')+'"]').closest('label').removeClass('checked');
+        $el.closest('form').find(':radio[name="'+$el.attr('name')+'"]').closest('label').removeClass('checked');
         $label.addClass('checked');
       } else {
         $label.removeClass('checked');
