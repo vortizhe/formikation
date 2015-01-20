@@ -65,6 +65,12 @@
     } else {
       $label.addClass('fk-radio');
     }
+    if (this.defaults.mapClass) {
+      $label.addClass($el.attr('class'));
+    }
+    if (this.defaults.mapStyle) {
+      $label.attr('style', $el.attr('style'));
+    }
 
     $el.on('fk_update', function () {
 
