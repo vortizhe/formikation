@@ -1,6 +1,10 @@
 {
-  "name": "example-project",
+  "name": "Formikation",
   "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vortizhe/formikation.git"
+  },
   "devDependencies": {
     "grunt": "^0.4.2",
     "grunt-contrib-uglify": "^0.4.0",
