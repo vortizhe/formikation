@@ -224,7 +224,7 @@
     selectSpanInner.html(html);
 
     if (currentSelected.attr('disabled')) {
-      selectSpan.addClass(getClass($el, 'fk-disable-option'));
+      selectSpan.addClass(formikation.getClass($el, 'fk-disable-option'));
     } else {
       selectSpan.removeClass(formikation.getClass($el, 'fk-disable-option'));
     }
