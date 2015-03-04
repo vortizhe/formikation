@@ -3,22 +3,22 @@
 
 *formikation* es un sencillo _embellecedor_ de formularios que emplea un sprite minísculo e intenta meter el mínimo HTML adicional posible para hacer los formularios bonitos. *Precisa JQuery*.
 
-Los elementos que procesa son:  
-`input:checkbox`  
-`input:radiobutton`  
-`input:file`  
+Los elementos que procesa son:
+`input:checkbox`
+`input:radiobutton`
+`input:file`
 `select`
 
 ### Ficheros requeridos
 
-`JQuery 1.9+`  
-`formikation.js`  
-`formikation.css`  
+`JQuery 1.9+`
+`formikation.js`
+`formikation.css`
 `formikation-sprite.png`
 
 ### Demo / vista del index.html
 
-[Demo online](http://htmlpreview.github.io/?https://raw.github.com/vortizhe/formikation/master/public/index.html)
+[Demo online](http://vortizhe.github.io/formikation/)
 
 ## Requerimientos de HTML
 
@@ -28,7 +28,7 @@ Los radiobutton y los checkboxes deben tener el `label` rodeándolos, de esta fo
       <input type="checkbox" name="check" id="check">
       Label del checkbox
     </label>
-    
+
     <label class="fk-radio">
       <input type="radio" name="radio" id="radio">
       Label del checkbox
@@ -50,7 +50,7 @@ Para que `formikation` pueda aplicar los estilos por defecto a tu formulario en 
 
     <form accept-charset="UTF-8" action="#" class="formikation ue-theme" method="post">
     ...
-    
+
 En el `index.html`  de ejemplo se incluyen 2 ejemplos de temas/estilos, **échales un ojo si quieres desarrollar tu propio tema**. Los estilos están en el fichero `formikation.css` (`formikation.scss` si prefieres usar SASS).
 
 
@@ -59,21 +59,21 @@ En el `index.html`  de ejemplo se incluyen 2 ejemplos de temas/estilos, **échal
 Se inicializa llamando a la función `formikation` directamente sobre un selector de Jquery de la siguiente forma:
 
     $(document).ready(function() {
-    
+
       $('select, input:file, input:checkbox, input:radio').formikation();
-    
+
     });
-    
+
 Para pasar los parámetros de inicializción _(detallados más adelante)_ lo haríamos igualmente pasándolos en la inicialización.
 
     $(document).ready(function() {
-    
+
       // La magia aquí
       $('select, input:file, input:checkbox, input:radio').formikation({
         mapClass: true,
         mapStyle: true
       });
-    
+
     });
 
 ## IE8

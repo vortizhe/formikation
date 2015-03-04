@@ -25,8 +25,7 @@ form.formikation label {
     float: left;
     width: 19px;
     height: 20px;
-    margin: -1px 4px 0 0;
-    background: url('../img/formikation-sprite.png') no-repeat 0 0; }
+    margin: -1px 4px 0 0; }
   form.formikation label.fk-radio:before {
     background-position: 0 -20px; }
   form.formikation label.checked.fk-radio:before {
@@ -46,7 +45,6 @@ form.formikation .fk-select {
   background: #fff;
   border-radius: 3px; }
   form.formikation .fk-select:after {
-    content: url('../img/formikation-select-arrow.png');
     display: block;
     float: right;
     padding: 8px 12px;
@@ -125,3 +123,6 @@ form.formikation .fk-file-input {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     z-index: 3;
     cursor: pointer; }
+
+
+/*# sourceMappingURL=maps/formikation.css.map */
