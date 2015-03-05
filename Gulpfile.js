@@ -40,7 +40,7 @@ gulp.task('sass', function() {
 
 // HTML
 gulp.task('html', function() {
-  return gulp.src('./test/index.html')
+  return gulp.src('./index.html')
   .pipe(livereload());
 });
 
@@ -56,7 +56,7 @@ gulp.task('default', function() {
   gulp.watch('./src/formikation.scss', ['sass']);
 
   // Watch HTML and livereload
-  gulp.watch('./demo/index.html', ['html']);
+  gulp.watch('./index.html', ['html']);
 
   // Watch Gulpconfig
   gulp.watch('./Gulpfile.js', ['uglifyjs', 'sass', 'html']);
