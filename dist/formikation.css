@@ -1,20 +1,20 @@
-form.formikation input[type=checkbox], form.formikation input[type=radio] {
+.formikation input[type=checkbox], .formikation input[type=radio] {
   padding-top: 1px;
   margin: 0;
   padding: 0;
   cursor: pointer;
   position: absolute;
   left: -9999px; }
-form.formikation label {
+.formikation label {
   display: block;
   padding-right: 16px;
   margin-bottom: 0.5em;
   cursor: pointer; }
-  form.formikation label.fk-radio, form.formikation label.fk-check {
+  .formikation label.fk-radio, .formikation label.fk-check {
     position: relative;
     display: inline-block;
     margin-bottom: 0; }
-    form.formikation label.fk-radio:before, form.formikation label.fk-check:before {
+    .formikation label.fk-radio:before, .formikation label.fk-check:before {
       content: ' ';
       display: inline-block;
       vertical-align: middle;
@@ -23,7 +23,7 @@ form.formikation label {
       border: 1px solid #d8d8d8;
       margin-top: -2px;
       border-radius: 3px; }
-    form.formikation label.fk-radio:after, form.formikation label.fk-check:after {
+    .formikation label.fk-radio:after, .formikation label.fk-check:after {
       content: ' ';
       display: block;
       width: 12px;
@@ -34,16 +34,16 @@ form.formikation label {
       background: #fff;
       background: transparent;
       border-radius: 3px; }
-  form.formikation label.fk-radio:before, form.formikation label.fk-radio:after {
+  .formikation label.fk-radio:before, .formikation label.fk-radio:after {
     border-radius: 50%; }
-  form.formikation label.checked.fk-radio:after, form.formikation label.checked.fk-check:after {
+  .formikation label.checked.fk-radio:after, .formikation label.checked.fk-check:after {
     content: '';
     background: #2f97e9; }
-  form.formikation label.disabled.fk-radio, form.formikation label.disabled.fk-check {
+  .formikation label.disabled.fk-radio, .formikation label.disabled.fk-check {
     opacity: 0.6; }
-form.formikation select {
+.formikation select {
   width: 100%; }
-form.formikation .fk-select {
+.formikation .fk-select {
   display: block;
   width: 100%;
   min-width: 250px;
@@ -51,13 +51,13 @@ form.formikation .fk-select {
   border: 1px solid #d8d8d8;
   background: #fff;
   border-radius: 3px; }
-  form.formikation .fk-select:after {
+  .formikation .fk-select:after {
     display: block;
     float: right;
     padding: 8px 12px;
     margin: -8px -15px;
     border-left: 1px solid #d8d8d8; }
-  form.formikation .fk-select .fk-select-label {
+  .formikation .fk-select .fk-select-label {
     display: inline-block;
     margin: 0;
     padding: 0;
@@ -65,15 +65,15 @@ form.formikation .fk-select {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; }
-  form.formikation .fk-select.fk-select-focus {
+  .formikation .fk-select.fk-select-focus {
     border-color: #000; }
-    form.formikation .fk-select.fk-select-focus:after {
+    .formikation .fk-select.fk-select-focus:after {
       border-color: #000; }
-    form.formikation .fk-select.fk-select-focus .fl-select-label {
+    .formikation .fk-select.fk-select-focus .fl-select-label {
       color: #000; }
-  form.formikation .fk-select.disabled {
+  .formikation .fk-select.disabled {
     opacity: 0.6; }
-form.formikation .fk-file-input {
+.formikation .fk-file-input {
   display: block;
   position: relative;
   overflow: hidden;
@@ -84,7 +84,7 @@ form.formikation .fk-file-input {
   outline: 0;
   border-radius: 3px;
   line-height: 1.2; }
-  form.formikation .fk-file-input:after {
+  .formikation .fk-file-input:after {
     content: 'Select file';
     display: block;
     position: absolute;
@@ -100,10 +100,10 @@ form.formikation .fk-file-input {
     background-color: #2f97e9;
     border-radius: 3px;
     line-height: 1; }
-  form.formikation .fk-file-input > p {
+  .formikation .fk-file-input > p {
     margin: 0;
     padding: 0px 0 0 8px !important; }
-  form.formikation .fk-file-input input[type=file] {
+  .formikation .fk-file-input input[type=file] {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -113,7 +113,7 @@ form.formikation .fk-file-input {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     z-index: 3;
     cursor: pointer; }
-  form.formikation .fk-file-input.disabled {
+  .formikation .fk-file-input.disabled {
     opacity: 0.6; }
 
 
