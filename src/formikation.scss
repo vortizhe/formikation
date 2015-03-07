@@ -1,7 +1,8 @@
 // vars
 
 $border_radius: 3px !default;
-$btn_color: red !default;
+$color: #2f97e9 !default;
+$border_color: #d8d8d8 !default;
 
 
 
@@ -21,7 +22,6 @@ form.formikation {
   }
 
 
-
   //
   // Labels
   //
@@ -32,6 +32,7 @@ form.formikation {
     cursor: pointer;
     &.fk-radio,
     &.fk-check {
+      position: relative;
       display: inline-block;
       margin-bottom: 0;
       &:before {
@@ -40,22 +41,33 @@ form.formikation {
         vertical-align: middle;
         width: 20px;
         height: 20px;
-        border: 1px solid #000;
+        border: 1px solid $border_color;
         margin-top: -2px;
+        border-radius: $border_radius;
+      }
+      &:after {
+        content: ' ';
+        display: block;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        left: 5px;
+        top: 3px;
+        background: #fff;
+        background: transparent;
+        border-radius: $border_radius;
       }
     }
-    &.fk-radio:before {
+    &.fk-radio:before,
+    &.fk-radio:after {
       border-radius: 50%;
     }
     &.checked {
-      &.fk-radio:before {
+      &.fk-radio:after,
+      &.fk-check:after {
         // IE8 does not render the changes in a :pseudo-element with we don't change the 'content', thus we change it from ' ' -> ''.
         content: '';
-        background: red;
-      }
-      &.fk-check:before {
-        content: '';
-        background: red;
+        background: $color;
       }
     }
     &.disabled {
@@ -78,8 +90,8 @@ form.formikation {
     display: block;
     width: 100%;
     min-width: 250px;
-    padding: 8px 15px 4px 4px;
-    border: 1px solid #ccc;
+    padding: 10px 10px 5px;
+    border: 1px solid $border_color;
     background: #fff;
     border-radius: $border_radius;
     &:after {
@@ -87,14 +99,13 @@ form.formikation {
       float: right;
       padding: 8px 12px;
       margin: -8px -15px;
-      border-left: 1px solid #CCC;
+      border-left: 1px solid $border_color;
     }
     .fk-select-label {
       display: inline-block;
       margin: 0;
-      padding: 0 30px 0 0;
+      padding: 0;
       color: #666;
-      max-width: 430px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -119,7 +130,7 @@ form.formikation {
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding: 8px 4px;
+    padding: 10px 4px 6px;
     background: #fff;
     border: 1px solid #ccc;
     outline: 0;
@@ -129,16 +140,16 @@ form.formikation {
       content: 'Select file';
       display: block;
       position: absolute;
-      right: 3px;
-      top: 3px;
-      padding: 6px 10px;
+      right: 4px;
+      top: 4px;
+      padding: 7px 10px 4px;
       border: 0;
       outline: 0;
       cursor: pointer;
       text-decoration: none;
       text-align: center;
       color: #fff;
-      background-color: $btn_color;
+      background-color: $color;
       border-radius: $border_radius;
       line-height: 1;
     }

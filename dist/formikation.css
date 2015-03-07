@@ -11,6 +11,7 @@ form.formikation label {
   margin-bottom: 0.5em;
   cursor: pointer; }
   form.formikation label.fk-radio, form.formikation label.fk-check {
+    position: relative;
     display: inline-block;
     margin-bottom: 0; }
     form.formikation label.fk-radio:before, form.formikation label.fk-check:before {
@@ -19,16 +20,25 @@ form.formikation label {
       vertical-align: middle;
       width: 20px;
       height: 20px;
-      border: 1px solid #000;
-      margin-top: -2px; }
-  form.formikation label.fk-radio:before {
+      border: 1px solid #d8d8d8;
+      margin-top: -2px;
+      border-radius: 3px; }
+    form.formikation label.fk-radio:after, form.formikation label.fk-check:after {
+      content: ' ';
+      display: block;
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      left: 5px;
+      top: 3px;
+      background: #fff;
+      background: transparent;
+      border-radius: 3px; }
+  form.formikation label.fk-radio:before, form.formikation label.fk-radio:after {
     border-radius: 50%; }
-  form.formikation label.checked.fk-radio:before {
+  form.formikation label.checked.fk-radio:after, form.formikation label.checked.fk-check:after {
     content: '';
-    background: red; }
-  form.formikation label.checked.fk-check:before {
-    content: '';
-    background: red; }
+    background: #2f97e9; }
   form.formikation label.disabled.fk-radio, form.formikation label.disabled.fk-check {
     opacity: 0.6; }
 form.formikation select {
@@ -37,8 +47,8 @@ form.formikation .fk-select {
   display: block;
   width: 100%;
   min-width: 250px;
-  padding: 8px 15px 4px 4px;
-  border: 1px solid #ccc;
+  padding: 10px 10px 5px;
+  border: 1px solid #d8d8d8;
   background: #fff;
   border-radius: 3px; }
   form.formikation .fk-select:after {
@@ -46,13 +56,12 @@ form.formikation .fk-select {
     float: right;
     padding: 8px 12px;
     margin: -8px -15px;
-    border-left: 1px solid #CCC; }
+    border-left: 1px solid #d8d8d8; }
   form.formikation .fk-select .fk-select-label {
     display: inline-block;
     margin: 0;
-    padding: 0 30px 0 0;
+    padding: 0;
     color: #666;
-    max-width: 430px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; }
@@ -69,7 +78,7 @@ form.formikation .fk-file-input {
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding: 8px 4px;
+  padding: 10px 4px 6px;
   background: #fff;
   border: 1px solid #ccc;
   outline: 0;
@@ -79,16 +88,16 @@ form.formikation .fk-file-input {
     content: 'Select file';
     display: block;
     position: absolute;
-    right: 3px;
-    top: 3px;
-    padding: 6px 10px;
+    right: 4px;
+    top: 4px;
+    padding: 7px 10px 4px;
     border: 0;
     outline: 0;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
     color: #fff;
-    background-color: red;
+    background-color: #2f97e9;
     border-radius: 3px;
     line-height: 1; }
   form.formikation .fk-file-input > p {
