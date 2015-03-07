@@ -1,93 +1,64 @@
-# formikation
+# Formikation
 ### Simple form beautifier
 
-*formikation* es un sencillo _embellecedor_ de formularios que emplea un sprite minísculo e intenta meter el mínimo HTML adicional posible para hacer los formularios bonitos. *Precisa JQuery*.
+*Formikation* is a simple jQuery plugin to beautify form inputs with some css.
 
-Los elementos que procesa son:
+The elements to work with are:
+
 `input:checkbox`
+
 `input:radiobutton`
+
 `input:file`
+
 `select`
 
-### Ficheros requeridos
+### Demo
 
-`JQuery 1.9+`
-`formikation.js`
-`formikation.css`
-`formikation-sprite.png`
+Take a look to [online demo](http://vortizhe.github.io/formikation/examples.html), there are some examples with diferent themes.
 
-### Demo / vista del index.html
+## HTML Requisites
 
-[Demo online](http://vortizhe.github.io/formikation/)
+The only html requisite is to style radiobuttons and checkboxes. Them must be wrapped by a `label`
 
-## Requerimientos de HTML
+```html
+<label>
+  <input type="checkbox" name="check" id="check">
+  Checkbox label
+</label>
 
-Los radiobutton y los checkboxes deben tener el `label` rodeándolos, de esta forma:
+<label>
+  <input type="radio" name="radio" id="radio">
+  Radio label
+</label>
+```
 
-    <label class="fk-check">
-      <input type="checkbox" name="check" id="check">
-      Label del checkbox
-    </label>
+## Apply default theme
 
-    <label class="fk-radio">
-      <input type="radio" name="radio" id="radio">
-      Label del checkbox
-    </label>
+The default theme included with Formikation depends on `.formikation` class on a parent element. Just add `.formikation` to the form or a wrapper div:
 
-## Wrapper del file input
-
-Para estilar el file input se genera un `wrapper`alrededor que tiene este formato
-
-    <div class="fk-file-input">
-      <p>Select file...</p>
-      // Debajo el input original
-      <input type="file" name="sample-file-input" id="sample-file-input">
-    </div>
-
-## Aplicar los estilos de formikation
-
-Para que `formikation` pueda aplicar los estilos por defecto a tu formulario en form debe tener la clase `.formikation` asignada, de la siguiente forma:
-
-    <form accept-charset="UTF-8" action="#" class="formikation ue-theme" method="post">
+```html
+    <form action="/" class="formikation" >
     ...
+```
 
-En el `index.html`  de ejemplo se incluyen 2 ejemplos de temas/estilos, **échales un ojo si quieres desarrollar tu propio tema**. Los estilos están en el fichero `formikation.css` (`formikation.scss` si prefieres usar SASS).
+If you want to develop your own theme, take a look to `src/formikation.scss` it is very easy, do not require to much work to customize.
 
 
-## Ejemplos de uso generales
+## Initialization
 
-Se inicializa llamando a la función `formikation` directamente sobre un selector de Jquery de la siguiente forma:
+Call Formikation jQuery plugin on ready function:
 
-    $(document).ready(function() {
+```js
+$(function() {
 
-      $('select, input:file, input:checkbox, input:radio').formikation();
+  $('.formikation').find('select, input:file, input:checkbox, input:radio').formikation();
 
-    });
-
-Para pasar los parámetros de inicializción _(detallados más adelante)_ lo haríamos igualmente pasándolos en la inicialización.
-
-    $(document).ready(function() {
-
-      // La magia aquí
-      $('select, input:file, input:checkbox, input:radio').formikation({
-        mapClass: true,
-        mapStyle: true
-      });
-
-    });
+});
+```
 
 ## IE8
 
-IE8 tiene dificultades checkeando / descheckeando radios y buttons _'invisibles'_ con `display: none;` o con  `visible:hidden` así que la solución es ponerlos en `absolute` y con un `left:-9999px` sacándolos de la pantalla.
+IE8 has some dificults on repainting `:before` and `:after` pseudo-elements after change checkbox or radiobuttons status.
 
-Otra peculiaridad de IE8 es que **no actualiza** los `pseudo-elementos` como el `:before` y el `:after` a no ser que el `content` cambie.
-
-## Conflictos / precauciones varias
-
-To come.
-
-## TO-DO
-
-- Crear un método que haga `check` de radios y checkboxes programáticamente.
-- ¿Hacer un método que "desformike"?
-
+Is simple to fix it, just change pseudo-element content from `''` to `' '` _(this fix is applied on default theme)_.

@@ -1,7 +1,7 @@
 {
   "name": "Formikation",
   "version": "0.2.0",
-  "description": "A simple form beautifier",
+  "description": "Formikation is a simple jQuery plugin to beautify form inputs with some css.",
   "keywords": ["jquery-plugin", "forms", "custom form", "checkbox", "radiobutton", "select", "file"],
   "author": {
     "name": "Victor Ortiz",
