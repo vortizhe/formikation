@@ -1,39 +1,15 @@
-//
-// ====================================
-// General formication styles
-// Modify with care!
-// =====================================
-//
-
 // vars
 
 $border_radius: 3px !default;
-
 $btn_color: red !default;
 
-// definition
+
 
 form.formikation {
 
-
-  // Generic button style
-  a.btn,
-  button.btn,
-  input[type=submit].btn {
-    padding: 8px 10px;
-    border: 0;
-    outline: 0;
-    cursor: pointer;
-
-    text-decoration: none;
-    text-align: center;
-    color: #fff;
-
-    background-color: $btn_color;
-    border-radius: $border_radius;
-  }
-
-  // Checks y radios
+  //
+  // Checks and radios
+  //
   input[type=checkbox],
   input[type=radio] {
     padding-top: 1px;
@@ -44,58 +20,63 @@ form.formikation {
     left: -9999px;
   }
 
+
+
+  //
   // Labels
+  //
   label {
-    display: inline-block;
+    display: block;
     padding-right: 16px;
+    margin-bottom: 0.5em;
     cursor: pointer;
     &.fk-radio,
     &.fk-check {
+      display: inline-block;
+      margin-bottom: 0;
       &:before {
         content: ' ';
         display: inline-block;
-        float: left;
-        width: 19px;
+        vertical-align: middle;
+        width: 20px;
         height: 20px;
-        margin: -1px 4px 0 0;
+        border: 1px solid #000;
+        margin-top: -2px;
       }
     }
-    &.fk-radio {
-      &:before {
-        background-position: 0 -20px;
-      }
+    &.fk-radio:before {
+      border-radius: 50%;
     }
     &.checked {
-      &.fk-radio {
-        &:before {
-          // IE8 does not render the changes in a :pseudo-element with we don't change the 'content', thus we change it from ' ' -> ''.
-          content: '';
-          background-position: -21px -20px;
-        }
+      &.fk-radio:before {
+        // IE8 does not render the changes in a :pseudo-element with we don't change the 'content', thus we change it from ' ' -> ''.
+        content: '';
+        background: red;
       }
+      &.fk-check:before {
+        content: '';
+        background: red;
+      }
+    }
+    &.disabled {
+      &.fk-radio,
       &.fk-check {
-        &:before {
-          content: '';
-          background-position: -21px 0;
-        }
-      }
-    }
-    input[type=radio] {
-      &:before {
-        background-position: -21px -20px;
+        opacity: 0.6;
       }
     }
   }
 
-  // Select tag
+
+
+  //
+  // Select
+  //
   select {
-    // width: 100%; // Full width
-    min-width: 250px;
+    width: 100%;
   }
-
-  // Select span
   .fk-select {
-    // width: 100%; // Full width
+    display: block;
+    width: 100%;
     min-width: 250px;
     padding: 8px 15px 4px 4px;
     border: 1px solid #ccc;
@@ -123,68 +104,43 @@ form.formikation {
       &:after { border-color: #000; }
       .fl-select-label { color: #000; }
     }
-    // From Parsley
-    .field_with_errors & {
-      border-color: red;
-      &:after { border-color: red; }
-      .file-label { color: red; }
+    &.disabled {
+      opacity: 0.6;
     }
   }
 
-  // Text fields
-  input[type=text],
-  input[type=password],
-  textarea {
-    width: 100%;
 
-    padding: 8px 4px;
-    background: #fff;
-    border: 1px solid #ccc;
-    outline: 0;
 
-    font-size: 14px;
-    border-radius: $border_radius;
-    color: #333;
-
-    &:focus {
-      border-color: #000;
-    }
-  }
-
+  //
+  // File input
+  //
   .fk-file-input {
-    width: 94%;
-    height: 39px;
     display: block;
     position: relative;
     overflow: hidden;
-
     width: 100%;
     padding: 8px 4px;
     background: #fff;
     border: 1px solid #ccc;
     outline: 0;
     border-radius: $border_radius;
-
-    // Select file button
+    line-height: 1.2;
     &:after {
       content: 'Select file';
       display: block;
-      height:31px;
       position: absolute;
       right: 3px;
       top: 3px;
-
       padding: 6px 10px;
       border: 0;
       outline: 0;
       cursor: pointer;
-
       text-decoration: none;
       text-align: center;
       color: #fff;
-
       background-color: $btn_color;
       border-radius: $border_radius;
+      line-height: 1;
     }
     > p {
       margin: 0;
@@ -201,6 +157,9 @@ form.formikation {
       -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
       z-index: 3;
       cursor: pointer;
+    }
+    &.disabled {
+      opacity: 0.6;
     }
   }
 }

@@ -6,8 +6,8 @@
     Collaborators:
     Carlos Cabo @putuko
 
-  V.0.2 (2014/04/09)
-  git@github.com:vortizhe/formikation.git
+  V.0.2.1
+  https://github.com/vortizhe/formikation
 
 */
 
@@ -72,7 +72,7 @@
       $label.attr('style', $el.attr('style'));
     }
 
-    $el.on('fk_update', function () {
+    $el.on('formikation.update', function () {
 
       if ($el.prop('checked')) {
         $el.closest('form').find(':radio[name="'+$el.attr('name')+'"]').closest('label').removeClass('checked');
@@ -80,13 +80,16 @@
       } else {
         $label.removeClass('checked');
       }
+
+      formikation.is_disabled($el, $label);
     });
 
-    $el.on('click', function() {
-      $el.trigger('fk_update');
+
+    $el.on('click, change', function() {
+      $el.trigger('formikation.update');
     });
 
-    $el.trigger('fk_update');
+    $el.trigger('formikation.update');
   },
 
   // Process selects
@@ -109,72 +112,74 @@
     }
 
     $el.addClass('has-fk-select')
-    .on('update', function () {
-      formikation.changed($el,selectSpan);
-      formikation.updateSelectWH($el);
-    })
-    .on('change', function () {
-        selectSpan.addClass(formikation.getClass($el, 'Changed'));
-        formikation.changed($el,selectSpan);
-        formikation.updateSelectWH($el);
-    })
-    .on('keyup', function (e) {
-      if(!selectSpan.hasClass(formikation.getClass($el, 'Open'))){
-        $el.blur();
-        $el.focus();
-      } else{
-        if(e.which==13||e.which==27){
-          formikation.changed($el,selectSpan);
-        }
-      }
-    })
-    .on('mousedown', function (e) {
-      selectSpan.removeClass(formikation.getClass($el, 'Changed'));
-    })
-    .on('mouseup', function (e) {
-      if( !selectSpan.hasClass(formikation.getClass($el, 'Open'))){
-        // if FF and there are other selects open, just apply focus
-        if($('.'+formikation.getClass($el, 'Open')).not(selectSpan).length>0 && typeof InstallTrigger !== 'undefined'){
-          $el.focus();
-        }else{
-          selectSpan.addClass(formikation.getClass($el, 'Open'));
-          e.stopPropagation();
-          $(document).one('mouseup.'+formikation.getClass($el, 'Open'), function (e) {
-            if( e.target != $el.get(0) && $.inArray(e.target,$el.find('*').get()) < 0 ){
-              $el.blur();
-            }else{
-              formikation.changed($el,selectSpan);
-            }
-          });
-        }
-      }
-    })
-    .focus(function () {
-      selectSpan.removeClass(formikation.getClass($el, '-changed')).addClass(formikation.getClass($el, '-focus'));
-    })
-    .blur(function () {
-      selectSpan.removeClass(formikation.getClass($el, '-focus')+' '+formikation.getClass($el, '-open'));
-    })
-    .hover(function () {
-      selectSpan.addClass(formikation.getClass($el, '-hover'));
-    }, function () {
-      selectSpan.removeClass(formikation.getClass($el, '-hover'));
-    })
-    .trigger('update');
+       .on('formikation.update', function () {
+         formikation.changed($el,selectSpan);
+         formikation.updateSelectWH($el);
+         formikation.is_disabled($el, selectSpan);
+       })
+       .on('change', function () {
+          selectSpan.addClass(formikation.getClass($el, 'Changed'));
+          $el.trigger('formikation.update');
+       })
+       .on('keyup', function (e) {
+         if(!selectSpan.hasClass(formikation.getClass($el, 'Open'))){
+           $el.blur();
+           $el.focus();
+         } else{
+           if(e.which==13||e.which==27){
+             formikation.changed($el,selectSpan);
+           }
+         }
+       })
+       .on('mousedown', function (e) {
+         selectSpan.removeClass(formikation.getClass($el, 'Changed'));
+       })
+       .on('mouseup', function (e) {
+         if( !selectSpan.hasClass(formikation.getClass($el, 'Open'))){
+           // if FF and there are other selects open, just apply focus
+           if($('.'+formikation.getClass($el, 'Open')).not(selectSpan).length>0 && typeof InstallTrigger !== 'undefined'){
+             $el.focus();
+           }else{
+             selectSpan.addClass(formikation.getClass($el, 'Open'));
+             e.stopPropagation();
+             $(document).one('mouseup.'+formikation.getClass($el, 'Open'), function (e) {
+               if( e.target != $el.get(0) && $.inArray(e.target,$el.find('*').get()) < 0 ){
+                 $el.blur();
+               }else{
+                 formikation.changed($el,selectSpan);
+               }
+             });
+           }
+         }
+       })
+       .focus(function () {
+         selectSpan.removeClass(formikation.getClass($el, '-changed')).addClass(formikation.getClass($el, '-focus'));
+       })
+       .blur(function () {
+         selectSpan.removeClass(formikation.getClass($el, '-focus')+' '+formikation.getClass($el, '-open'));
+       })
+       .hover(function () {
+         selectSpan.addClass(formikation.getClass($el, '-hover'));
+       }, function () {
+         selectSpan.removeClass(formikation.getClass($el, '-hover'));
+       })
+       .trigger('formikation.update');
   },
 
   // Process input file
   processInputFile: function(el) {
-    var div = $('<div class="fk-file-input">');
-    $(el).on('change', function(e) {
+    var $div = $('<div class="fk-file-input">'),
+        $el = $(el);
+    $el.on('change', function(e) {
       // e.preventDefault();
-      var fn = $(this).val().replace(/C:\\fakepath\\/i, '');
+      var fn = $el.val().replace(/C:\\fakepath\\/i, '');
       if (!fn) {
         fn = 'Select file...';
       }
-      $(this).prev('p').html(fn);
+      $el.prev('p').html(fn);
     });
-    $(el).wrap(div).parent().prepend('<p>Select file...</p>');
+    formikation.is_disabled($el, $div);
+    $el.wrap($div).parent().prepend('<p>Select file...</p>');
   },
 
   // Updates select width to match span
@@ -191,12 +196,6 @@
     var
       w = parseInt($spa.outerWidth(), 10),
       h = parseInt($spa.outerHeight(), 10);
-
-    if ($sel.attr('disabled')) {
-      $spa.addClass(formikation.getClass($sel, 'Disabled'));
-    } else {
-      $spa.removeClass(formikation.getClass($sel, 'Disabled'));
-    }
 
     $sel.css({
       '-webkit-appearance': 'menulist-button',
@@ -223,7 +222,7 @@
 
     selectSpanInner.html(html);
 
-    if (currentSelected.attr('disabled')) {
+    if (currentSelected.prop('disabled')) {
       selectSpan.addClass(formikation.getClass($el, 'fk-disable-option'));
     } else {
       selectSpan.removeClass(formikation.getClass($el, 'fk-disable-option'));
@@ -233,6 +232,15 @@
       selectSpan.removeClass(formikation.getClass($el, 'Open'));
       $(document).off('mouseup.'+formikation.getClass($el, 'Open'));
     }, 60);
+  },
+
+  // Check if element is disabled
+  is_disabled: function($el, $target) {
+    if ($el.prop('disabled')) {
+      $target.addClass('disabled');
+    } else {
+      $target.removeClass('disabled');
+    }
   }
 
 };
