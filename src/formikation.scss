@@ -1,0 +1,176 @@
+// vars
+
+$border_radius: 3px !default;
+$color: #2f97e9 !default;
+$border_color: #d8d8d8 !default;
+
+
+
+.formikation {
+
+  //
+  // Checks and radios
+  //
+  input[type=checkbox],
+  input[type=radio] {
+    padding-top: 1px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    left: -9999px;
+  }
+
+
+  //
+  // Labels
+  //
+  label {
+    display: block;
+    padding-right: 16px;
+    margin-bottom: 0.5em;
+    cursor: pointer;
+    &.fk-radio,
+    &.fk-check {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 0;
+      &:before {
+        content: ' ';
+        display: inline-block;
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $border_color;
+        margin-top: -2px;
+        border-radius: $border_radius;
+      }
+      &:after {
+        content: ' ';
+        display: block;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        left: 5px;
+        top: 3px;
+        background: #fff;
+        background: transparent;
+        border-radius: $border_radius;
+      }
+    }
+    &.fk-radio:before,
+    &.fk-radio:after {
+      border-radius: 50%;
+    }
+    &.checked {
+      &.fk-radio:after,
+      &.fk-check:after {
+        // IE8 does not render the changes in a :pseudo-element with we don't change the 'content', thus we change it from ' ' -> ''.
+        content: '';
+        background: $color;
+      }
+    }
+    &.disabled {
+      &.fk-radio,
+      &.fk-check {
+        opacity: 0.6;
+      }
+    }
+  }
+
+
+
+  //
+  // Select
+  //
+  select {
+    width: 100%;
+  }
+  .fk-select {
+    display: block;
+    width: 100%;
+    min-width: 250px;
+    padding: 10px 10px 5px;
+    border: 1px solid $border_color;
+    background: #fff;
+    border-radius: $border_radius;
+    &:after {
+      display: block;
+      float: right;
+      padding: 8px 12px;
+      margin: -8px -15px;
+      border-left: 1px solid $border_color;
+    }
+    .fk-select-label {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      color: #666;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &.fk-select-focus {
+      border-color: #000;
+      &:after { border-color: #000; }
+      .fl-select-label { color: #000; }
+    }
+    &.disabled {
+      opacity: 0.6;
+    }
+  }
+
+
+
+  //
+  // File input
+  //
+  .fk-file-input {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 10px 4px 6px;
+    background: #fff;
+    border: 1px solid #ccc;
+    outline: 0;
+    border-radius: $border_radius;
+    line-height: 1.2;
+    &:after {
+      content: 'Select file';
+      display: block;
+      position: absolute;
+      right: 4px;
+      top: 4px;
+      padding: 7px 10px 4px;
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      color: #fff;
+      background-color: $color;
+      border-radius: $border_radius;
+      line-height: 1;
+    }
+    > p {
+      margin: 0;
+      padding: 0px 0 0 8px !important;
+    }
+    input[type=file] {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      // IE8
+      -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      z-index: 3;
+      cursor: pointer;
+    }
+    &.disabled {
+      opacity: 0.6;
+    }
+  }
+}

@@ -1,0 +1,120 @@
+.formikation input[type=checkbox], .formikation input[type=radio] {
+  padding-top: 1px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  left: -9999px; }
+.formikation label {
+  display: block;
+  padding-right: 16px;
+  margin-bottom: 0.5em;
+  cursor: pointer; }
+  .formikation label.fk-radio, .formikation label.fk-check {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0; }
+    .formikation label.fk-radio:before, .formikation label.fk-check:before {
+      content: ' ';
+      display: inline-block;
+      vertical-align: middle;
+      width: 20px;
+      height: 20px;
+      border: 1px solid #d8d8d8;
+      margin-top: -2px;
+      border-radius: 3px; }
+    .formikation label.fk-radio:after, .formikation label.fk-check:after {
+      content: ' ';
+      display: block;
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      left: 5px;
+      top: 3px;
+      background: #fff;
+      background: transparent;
+      border-radius: 3px; }
+  .formikation label.fk-radio:before, .formikation label.fk-radio:after {
+    border-radius: 50%; }
+  .formikation label.checked.fk-radio:after, .formikation label.checked.fk-check:after {
+    content: '';
+    background: #2f97e9; }
+  .formikation label.disabled.fk-radio, .formikation label.disabled.fk-check {
+    opacity: 0.6; }
+.formikation select {
+  width: 100%; }
+.formikation .fk-select {
+  display: block;
+  width: 100%;
+  min-width: 250px;
+  padding: 10px 10px 5px;
+  border: 1px solid #d8d8d8;
+  background: #fff;
+  border-radius: 3px; }
+  .formikation .fk-select:after {
+    display: block;
+    float: right;
+    padding: 8px 12px;
+    margin: -8px -15px;
+    border-left: 1px solid #d8d8d8; }
+  .formikation .fk-select .fk-select-label {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .formikation .fk-select.fk-select-focus {
+    border-color: #000; }
+    .formikation .fk-select.fk-select-focus:after {
+      border-color: #000; }
+    .formikation .fk-select.fk-select-focus .fl-select-label {
+      color: #000; }
+  .formikation .fk-select.disabled {
+    opacity: 0.6; }
+.formikation .fk-file-input {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 10px 4px 6px;
+  background: #fff;
+  border: 1px solid #ccc;
+  outline: 0;
+  border-radius: 3px;
+  line-height: 1.2; }
+  .formikation .fk-file-input:after {
+    content: 'Select file';
+    display: block;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    padding: 7px 10px 4px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    background-color: #2f97e9;
+    border-radius: 3px;
+    line-height: 1; }
+  .formikation .fk-file-input > p {
+    margin: 0;
+    padding: 0px 0 0 8px !important; }
+  .formikation .fk-file-input input[type=file] {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    z-index: 3;
+    cursor: pointer; }
+  .formikation .fk-file-input.disabled {
+    opacity: 0.6; }
+
+
+/*# sourceMappingURL=maps/formikation.css.map */
