@@ -1,4 +1,7 @@
 # Formikation
+
+[![Bower version](https://badge.fury.io/bo/formikation.svg)](http://badge.fury.io/bo/formikation)
+
 ### Simple form beautifier
 
 *Formikation* is a simple jQuery plugin to beautify form inputs with some css.
