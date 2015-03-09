@@ -1,6 +1,6 @@
 ---
 layout: default
-title: BurgerMenu - jQuery mobile menu
+title: Formikation - Simple form beutifier
 slug: home
 ---
 
