@@ -1,7 +1,7 @@
 // vars
 
 $border_radius: 3px !default;
-$color: #2f97e9 !default;
+$color: #337AB7 !default;
 $border_color: #d8d8d8 !default;
 
 
@@ -52,7 +52,7 @@ $border_color: #d8d8d8 !default;
         height: 12px;
         position: absolute;
         left: 5px;
-        top: 3px;
+        top: 4px;
         background: #fff;
         background: transparent;
         border-radius: $border_radius;
@@ -142,7 +142,7 @@ $border_color: #d8d8d8 !default;
       position: absolute;
       right: 4px;
       top: 4px;
-      padding: 7px 10px 4px;
+      padding: 7px 10px 6px;
       border: 0;
       outline: 0;
       cursor: pointer;
