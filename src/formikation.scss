@@ -1,80 +1,53 @@
-// vars
-
-$border_radius: 3px !default;
-$color: #2f97e9 !default;
-$border_color: #d8d8d8 !default;
-
-
-
 .formikation {
+  label {
+    display: block;
+  }
 
   //
   // Checks and radios
   //
   input[type=checkbox],
   input[type=radio] {
-    padding-top: 1px;
     margin: 0;
     padding: 0;
     cursor: pointer;
     position: absolute;
     left: -9999px;
   }
-
-
-  //
-  // Labels
-  //
-  label {
+  .fk-radio,
+  .fk-check {
     display: block;
-    padding-right: 16px;
-    margin-bottom: 0.5em;
-    cursor: pointer;
-    &.fk-radio,
-    &.fk-check {
-      position: relative;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+    &:before {
+      content: ' ';
       display: inline-block;
-      margin-bottom: 0;
-      &:before {
-        content: ' ';
-        display: inline-block;
-        vertical-align: middle;
-        width: 20px;
-        height: 20px;
-        border: 1px solid $border_color;
-        margin-top: -2px;
-        border-radius: $border_radius;
-      }
-      &:after {
-        content: ' ';
-        display: block;
-        width: 12px;
-        height: 12px;
-        position: absolute;
-        left: 5px;
-        top: 3px;
-        background: #fff;
-        background: transparent;
-        border-radius: $border_radius;
-      }
+      vertical-align: middle;
     }
-    &.fk-radio:before,
-    &.fk-radio:after {
-      border-radius: 50%;
+    &:after {
+      content: ' ';
+      display: block;
+      position: absolute;
+      background: #fff;
     }
     &.checked {
-      &.fk-radio:after,
-      &.fk-check:after {
-        // IE8 does not render the changes in a :pseudo-element with we don't change the 'content', thus we change it from ' ' -> ''.
+      &:after,
+      &:after {
+        // IE8 does not render the changes in a :pseudo-element with we don't change the 'content', thus we change it from ' ' to ''
         content: '';
-        background: $color;
+        background: #000;
       }
     }
     &.disabled {
-      &.fk-radio,
-      &.fk-check {
-        opacity: 0.6;
-      }
+      opacity: 0.6;
+      -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    }
+  }
+  .fk-radio {
+    &:before,
+    &:after {
+      border-radius: 50%;
     }
   }
 
@@ -90,16 +63,11 @@ $border_color: #d8d8d8 !default;
     display: block;
     width: 100%;
     min-width: 250px;
-    padding: 10px 10px 5px;
-    border: 1px solid $border_color;
-    background: #fff;
-    border-radius: $border_radius;
     &:after {
       display: block;
       float: right;
       padding: 8px 12px;
       margin: -8px -15px;
-      border-left: 1px solid $border_color;
     }
     .fk-select-label {
       display: inline-block;
@@ -110,13 +78,9 @@ $border_color: #d8d8d8 !default;
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    &.fk-select-focus {
-      border-color: #000;
-      &:after { border-color: #000; }
-      .fl-select-label { color: #000; }
-    }
     &.disabled {
       opacity: 0.6;
+      -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
     }
   }
 
@@ -130,32 +94,20 @@ $border_color: #d8d8d8 !default;
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding: 10px 4px 6px;
-    background: #fff;
-    border: 1px solid #ccc;
     outline: 0;
-    border-radius: $border_radius;
     line-height: 1.2;
     &:after {
-      content: 'Select file';
+      content: attr(data-text);
       display: block;
       position: absolute;
-      right: 4px;
-      top: 4px;
-      padding: 5px 10px 6px;
+      right: 0;
       border: 0;
       outline: 0;
       cursor: pointer;
-      text-decoration: none;
-      text-align: center;
-      color: #fff;
-      background-color: $color;
-      border-radius: $border_radius;
-      line-height: 1;
     }
     > p {
       margin: 0;
-      padding: 0px 0 0 8px !important;
+      padding: 0;
     }
     input[type=file] {
       width: 100%;

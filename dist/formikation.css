@@ -8,9 +8,12 @@
  * 
  * Released on: January 24, 2016
  */
+.formikation label {
+  display: block;
+}
+
 .formikation input[type=checkbox],
 .formikation input[type=radio] {
-  padding-top: 1px;
   margin: 0;
   padding: 0;
   cursor: pointer;
@@ -18,54 +21,44 @@
   left: -9999px;
 }
 
-.formikation label {
+.formikation .fk-radio,
+.formikation .fk-check {
   display: block;
-  padding-right: 16px;
-  margin-bottom: 0.5em;
-  cursor: pointer;
-}
-
-.formikation label.fk-radio, .formikation label.fk-check {
   position: relative;
   display: inline-block;
   margin-bottom: 0;
 }
 
-.formikation label.fk-radio:before, .formikation label.fk-check:before {
+.formikation .fk-radio:before,
+.formikation .fk-check:before {
   content: ' ';
   display: inline-block;
   vertical-align: middle;
-  width: 20px;
-  height: 20px;
-  border: 1px solid #d8d8d8;
-  margin-top: -2px;
-  border-radius: 3px;
 }
 
-.formikation label.fk-radio:after, .formikation label.fk-check:after {
+.formikation .fk-radio:after,
+.formikation .fk-check:after {
   content: ' ';
   display: block;
-  width: 12px;
-  height: 12px;
   position: absolute;
-  left: 5px;
-  top: 3px;
   background: #fff;
-  background: transparent;
-  border-radius: 3px;
 }
 
-.formikation label.fk-radio:before, .formikation label.fk-radio:after {
-  border-radius: 50%;
-}
-
-.formikation label.checked.fk-radio:after, .formikation label.checked.fk-check:after {
+.formikation .fk-radio.checked:after, .formikation .fk-radio.checked:after,
+.formikation .fk-check.checked:after,
+.formikation .fk-check.checked:after {
   content: '';
-  background: #2f97e9;
+  background: #000;
 }
 
-.formikation label.disabled.fk-radio, .formikation label.disabled.fk-check {
+.formikation .fk-radio.disabled,
+.formikation .fk-check.disabled {
   opacity: 0.6;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+}
+
+.formikation .fk-radio:before, .formikation .fk-radio:after {
+  border-radius: 50%;
 }
 
 .formikation select {
@@ -76,10 +69,6 @@
   display: block;
   width: 100%;
   min-width: 250px;
-  padding: 10px 10px 5px;
-  border: 1px solid #d8d8d8;
-  background: #fff;
-  border-radius: 3px;
 }
 
 .formikation .fk-select:after {
@@ -87,7 +76,6 @@
   float: right;
   padding: 8px 12px;
   margin: -8px -15px;
-  border-left: 1px solid #d8d8d8;
 }
 
 .formikation .fk-select .fk-select-label {
@@ -100,20 +88,9 @@
   text-overflow: ellipsis;
 }
 
-.formikation .fk-select.fk-select-focus {
-  border-color: #000;
-}
-
-.formikation .fk-select.fk-select-focus:after {
-  border-color: #000;
-}
-
-.formikation .fk-select.fk-select-focus .fl-select-label {
-  color: #000;
-}
-
 .formikation .fk-select.disabled {
   opacity: 0.6;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
 }
 
 .formikation .fk-file-input {
@@ -121,11 +98,7 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding: 10px 4px 6px;
-  background: #fff;
-  border: 1px solid #ccc;
   outline: 0;
-  border-radius: 3px;
   line-height: 1.2;
 }
 
@@ -133,23 +106,15 @@
   content: attr(data-text);
   display: block;
   position: absolute;
-  right: 4px;
-  top: 4px;
-  padding: 5px 10px 6px;
+  right: 0;
   border: 0;
   outline: 0;
   cursor: pointer;
-  text-decoration: none;
-  text-align: center;
-  color: #fff;
-  background-color: #2f97e9;
-  border-radius: 3px;
-  line-height: 1;
 }
 
 .formikation .fk-file-input > p {
   margin: 0;
-  padding: 0px 0 0 8px !important;
+  padding: 0;
 }
 
 .formikation .fk-file-input input[type=file] {
