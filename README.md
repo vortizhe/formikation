@@ -1,6 +1,6 @@
 # Formikation
 
-[![Bower version](https://badge.fury.io/bo/formikation.svg)](http://badge.fury.io/bo/formikation)
+[![GitHub version](https://badge.fury.io/gh/vortizhe%2Fformikation.svg)](https://badge.fury.io/gh/vortizhe%2Fformikation)
 
 ### Simple form beautifier
 
