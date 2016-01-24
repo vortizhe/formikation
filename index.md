@@ -22,7 +22,7 @@ The elements to work with are:
 
 ### Demo
 
-Take a look to [online demo](http://vortizhe.github.io/formikation/examples.html), there are some examples with diferent themes.
+Take a look to [online demo](/formikation/examples.html), there are some examples with diferent themes.
 
 ## HTML Requisites
 
@@ -45,8 +45,9 @@ The only html requisite is to style radiobuttons and checkboxes. Them must be wr
 The default theme included with Formikation depends on `.formikation` class on a parent element. Just add `.formikation` to the form or a wrapper div:
 
 ```html
-    <form action="/" class="formikation" >
-    ...
+<form action="/" class="formikation" >
+...
+</form>
 ```
 
 If you want to develop your own theme, take a look to `src/formikation.scss` it is very easy, do not require to much work to customize.
@@ -58,9 +59,7 @@ Call Formikation jQuery plugin on ready function:
 
 ```js
 $(function() {
-
   $('.formikation').find('select, input:file, input:checkbox, input:radio').formikation();
-
 });
 ```
 
