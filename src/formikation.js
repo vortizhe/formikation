@@ -1,16 +1,3 @@
-/*
-
-  Formikation, simple form beautifier
-  By Víctor Ortiz @vorthize
-
-    Collaborators:
-    Carlos Cabo @putuko
-
-  V.0.2.1
-  https://github.com/vortizhe/formikation
-
-*/
-
 ;formikation = {
 
   // Internal variables / DOM caching / etc.
