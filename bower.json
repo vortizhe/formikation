@@ -1,7 +1,0 @@
-{
-  "name": "Formikation",
-  "version": "0.2.0",
-  "dependencies": {
-    "jquery": "~1.11"
-  }
-}
