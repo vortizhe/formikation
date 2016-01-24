@@ -9,7 +9,7 @@
  * Released on: January 24, 2016
  */
   
-;formikation = {
+formikation = {
 
   // Internal variables / DOM caching / etc.
   dat: {

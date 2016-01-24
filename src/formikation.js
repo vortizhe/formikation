@@ -1,4 +1,4 @@
-;formikation = {
+formikation = {
 
   // Internal variables / DOM caching / etc.
   dat: {
