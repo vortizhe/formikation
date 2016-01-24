@@ -17,7 +17,8 @@
         scripts: 'src/*.js',
         styles: 'src/*.scss',
         dist: 'dist/',
-        demo: 'demo/'
+        demo: 'demo/',
+        themes: 'src/themes/*.scss'
       },
       fk = {
         pkg: require('./package.json'),
@@ -53,6 +54,12 @@
         .pipe(header(fk.banner, { pkg: fk.pkg, date: fk.date }))
         .pipe(sass({outputStyle: 'expanded'}))
         .pipe(gulp.dest(paths.dist));
+
+    gulp.src(paths.themes)
+        .pipe(header(fk.banner, { pkg: fk.pkg, date: fk.date }))
+        .pipe(sass({outputStyle: 'expanded'}))
+        .pipe(gulp.dest(paths.dist + 'themes/'));
+
   });
 
   gulp.task('build', function () {
@@ -89,7 +96,7 @@
 
   gulp.task('watch', function () {
       gulp.watch(paths.scripts, [ 'scripts' ]);
-      gulp.watch(paths.styles, [ 'styles' ]);
+      gulp.watch([paths.styles, paths.themes], [ 'styles' ]);
   });
 
   gulp.task('connect', function () {

@@ -26,7 +26,7 @@
   display: block;
   position: relative;
   display: inline-block;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .formikation .fk-radio:before,
@@ -38,7 +38,7 @@
 
 .formikation .fk-radio:after,
 .formikation .fk-check:after {
-  content: ' ';
+  content: '';
   display: block;
   position: absolute;
   background: #fff;
@@ -47,8 +47,7 @@
 .formikation .fk-radio.checked:after, .formikation .fk-radio.checked:after,
 .formikation .fk-check.checked:after,
 .formikation .fk-check.checked:after {
-  content: '';
-  background: #000;
+  content: ' ';
 }
 
 .formikation .fk-radio.disabled,
@@ -68,21 +67,17 @@
 .formikation .fk-select {
   display: block;
   width: 100%;
-  min-width: 250px;
 }
 
 .formikation .fk-select:after {
   display: block;
   float: right;
-  padding: 8px 12px;
-  margin: -8px -15px;
 }
 
 .formikation .fk-select .fk-select-label {
   display: inline-block;
   margin: 0;
   padding: 0;
-  color: #666;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -99,7 +94,6 @@
   overflow: hidden;
   width: 100%;
   outline: 0;
-  line-height: 1.2;
 }
 
 .formikation .fk-file-input:after {

@@ -5,19 +5,108 @@
   <title>Formikation default theme sample.</title>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css"/>
   <link rel="stylesheet" href="../dist/formikation.css"/>
+  <link rel="stylesheet" href="../dist/themes/default.css"/>
   <style media="screen">
     body {
       font-family: monospace;
       padding: 0 20px;
     }
+    *, *:after, *:before {
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+    }
     .row {
       margin: 1em 0;
+    }
+    form {
+      width: 50%;
+      float: left;
+      padding-right: 20px;
     }
   </style>
 </head>
 
 <body>
   <h1>Basic clean styles</h1>
+  <form  action="./" class="formikation fk-default-theme">
+    <div class="row">
+      <label for="example-select">Select example</label>
+      <select id="example-select" name="example-select">
+        <option value="1">Select an option</option>
+        <option value="2">Option 1</option>
+        <option value="3">Option 2</option>
+        <option value="4">Option 3</option>
+        <option value="5">Option 4</option>
+        <option value="6">Option 5</option>
+        <option value="7">Option 6</option>
+      </select>
+    </div>
+    <div class="row">
+      <label for="example-select">Select with blank option example</label>
+      <select id="example-select" name="example-select">
+        <option value="1"></option>
+        <option value="2">Option 1</option>
+        <option value="3">Option 2</option>
+        <option value="4">Option 3</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label for="example-select-disabled">Select disabled example</label>
+      <select id="example-select-disabled" name="example-select-disabled" disabled>
+        <option value="1">Select an option</option>
+        <option value="2">Option 1</option>
+        <option value="3">Option 2</option>
+        <option value="4">Option 3</option>
+        <option value="5">Option 4</option>
+        <option value="6">Option 5</option>
+        <option value="7">Option 6</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label for="example-file-input">File input example</label>
+      <input type="file" name="example-file-input" id="example-file-input" data-text="Select file...">
+    </div>
+
+    <div class="row">
+      <label for="example-file-input">File input disabled example</label>
+      <input type="file" name="example-file-input" id="example-file-input" data-text="Select file disabled..." disabled>
+    </div>
+
+    <div class="row">
+      <label>
+        <input type="radio" name="example-radios" value="1">
+        Radio example
+      </label>
+      <label>
+        <input type="radio" name="example-radios" value="2" checked="checked">
+        Radio checked
+      </label>
+      <label>
+        <input type="radio" name="example-radios" value="3" disabled>
+        Radio disabled
+      </label>
+    </div>
+
+    <div class="row">
+      <label>
+        <input name="example-checkbox-1" type="checkbox" value="1">
+        Checkbox example
+      </label>
+      <label>
+        <input name="example-checkbox-2" type="checkbox" value="2" checked="checked">
+        Checkbox checked
+      </label>
+      <label>
+        <input name="example-checkbox-3" type="checkbox" value="3" disabled>
+        Checkbox disabled
+      </label>
+      </label>
+    </div>
+  </form>
+
   <form  action="./" class="formikation">
     <div class="row">
       <label for="example-select">Select example</label>
@@ -95,6 +184,7 @@
       </label>
     </div>
   </form>
+
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="../src/formikation.js"></script>
   <script src="./ready.js"></script>

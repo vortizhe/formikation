@@ -1,0 +1,93 @@
+/*!
+ * Formikation 0.2.0
+ * Formikation is a simple jQuery plugin to beautify form inputs with some css.
+ * 
+ * https://github.com/vortizhe/formikation
+ * 
+ * Copyright 2016, Victor Ortiz. Licensed under MIT.
+ * 
+ * Released on: January 24, 2016
+ */
+.fk-default-theme label {
+  padding-right: 16px;
+  margin-bottom: 0.5em;
+}
+
+.fk-default-theme label.fk-radio:before, .fk-default-theme label.fk-check:before {
+  content: ' ';
+  width: 20px;
+  height: 20px;
+  border: 1px solid #d8d8d8;
+  margin-top: -2px;
+  border-radius: 3px;
+}
+
+.fk-default-theme label.fk-radio:after, .fk-default-theme label.fk-check:after {
+  content: ' ';
+  width: 12px;
+  height: 12px;
+  left: 4px;
+  top: 2px;
+  border-radius: 3px;
+}
+
+.fk-default-theme label.fk-radio:before, .fk-default-theme label.fk-radio:after {
+  border-radius: 50%;
+}
+
+.fk-default-theme label.checked.fk-radio:after, .fk-default-theme label.checked.fk-check:after {
+  background: #2f97e9;
+}
+
+.fk-default-theme .fk-select {
+  padding: 10px 10px 5px;
+  border: 1px solid #d8d8d8;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.fk-default-theme .fk-select:after {
+  padding: 8px 12px;
+  margin: -8px -15px;
+  border-left: 1px solid #d8d8d8;
+}
+
+.fk-default-theme .fk-select .fk-select-label {
+  color: #666;
+}
+
+.fk-default-theme .fk-select.fk-select-focus {
+  border-color: #000;
+}
+
+.fk-default-theme .fk-select.fk-select-focus:after {
+  border-color: #000;
+}
+
+.fk-default-theme .fk-select.fk-select-focus .fl-select-label {
+  color: #000;
+}
+
+.fk-default-theme .fk-file-input {
+  padding: 10px 4px 6px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  line-height: 1.2;
+}
+
+.fk-default-theme .fk-file-input:after {
+  right: 4px;
+  top: 4px;
+  padding: 5px 10px 6px;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  background-color: #2f97e9;
+  border-radius: 3px;
+  line-height: 1;
+}
+
+.fk-default-theme .fk-file-input > p {
+  padding: 0px 0 0 8px;
+}
