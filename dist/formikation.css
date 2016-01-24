@@ -130,7 +130,7 @@
 }
 
 .formikation .fk-file-input:after {
-  content: 'Select file';
+  content: attr(data-text);
   display: block;
   position: absolute;
   right: 4px;
