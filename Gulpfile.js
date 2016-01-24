@@ -16,7 +16,8 @@
       paths = {
         scripts: 'src/*.js',
         styles: 'src/*.scss',
-        dist: 'dist/'
+        dist: 'dist/',
+        demo: 'demo/'
       },
       fk = {
         pkg: require('./package.json'),
@@ -86,7 +87,24 @@
         .pipe(gulp.dest(paths.dist));
   });
 
+  gulp.task('watch', function () {
+      gulp.watch(paths.scripts, [ 'scripts' ]);
+      gulp.watch(paths.styles, [ 'styles' ]);
+  });
+
+  gulp.task('connect', function () {
+      return connect.server({
+          root: './',
+          port:'3000'
+      });
+  });
+
+  gulp.task('open', function () {
+    return gulp.src(paths.demo + 'index.html').pipe(open({ uri: 'http://localhost:3000/' + paths.demo + 'index.html'}));
+  });
   gulp.task('dist', ['styles', 'scripts', 'build']);
 
-  gulp.task('default', ['dist']);
+  gulp.task('server', ['watch', 'connect', 'open']);
+
+  gulp.task('default', ['server']);
 })();
