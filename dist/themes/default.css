@@ -6,7 +6,7 @@
  * 
  * Copyright 2016, Victor Ortiz. Licensed under MIT.
  * 
- * Released on: January 24, 2016
+ * Released on: January 28, 2016
  */
 .fk-default-theme label {
   padding-right: 16px;
@@ -40,10 +40,11 @@
 }
 
 .fk-default-theme .fk-select {
-  padding: 10px 10px 5px;
+  padding: 10px;
   border: 1px solid #d8d8d8;
   background: #fff;
   border-radius: 3px;
+  line-height: 1.15;
 }
 
 .fk-default-theme .fk-select:after {
@@ -68,19 +69,28 @@
   color: #000;
 }
 
+.fk-default-theme .fk-select.disabled {
+  opacity: 0.6;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+}
+
+.fk-default-theme .has-fk-select {
+  width: 100%;
+  border: 0;
+}
+
 .fk-default-theme .fk-file-input {
-  padding: 10px 4px 6px;
+  padding: 10px;
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 .fk-default-theme .fk-file-input:after {
-  right: 4px;
-  top: 4px;
-  padding: 5px 10px 6px;
-  text-decoration: none;
+  right: 3px;
+  top: 3px;
+  padding: 8px 10px;
   text-align: center;
   color: #fff;
   background-color: #2f97e9;
@@ -88,6 +98,6 @@
   line-height: 1;
 }
 
-.fk-default-theme .fk-file-input > p {
-  padding: 0px 0 0 8px;
+.fk-default-theme .fk-file-input.disabled {
+  opacity: 0.6;
 }

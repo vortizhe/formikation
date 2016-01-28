@@ -52,10 +52,11 @@ $border_color: #d8d8d8 !default;
   // Select
   //
   .fk-select {
-    padding: 10px 10px 5px;
+    padding: 10px;
     border: 1px solid $border_color;
     background: #fff;
     border-radius: $border_radius;
+    line-height: 1.15;
     &:after {
       padding: 8px 12px;
       margin: -8px -15px;
@@ -69,6 +70,14 @@ $border_color: #d8d8d8 !default;
       &:after { border-color: #000; }
       .fl-select-label { color: #000; }
     }
+    &.disabled {
+      opacity: 0.6;
+      -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    }
+  }
+  .has-fk-select {
+    width: 100%;
+    border: 0;
   }
 
 
@@ -77,24 +86,23 @@ $border_color: #d8d8d8 !default;
   // File input
   //
   .fk-file-input {
-    padding: 10px 4px 6px;
+    padding: 10px;
     background: #fff;
     border: 1px solid #ccc;
     border-radius: $border_radius;
-    line-height: 1.2;
+    line-height: 1.15;
     &:after {
-      right: 4px;
-      top: 4px;
-      padding: 5px 10px 6px;
-      text-decoration: none;
+      right: 3px;
+      top: 3px;
+      padding: 8px 10px;
       text-align: center;
       color: #fff;
       background-color: $color;
       border-radius: $border_radius;
       line-height: 1;
     }
-    > p {
-      padding: 0px 0 0 8px;
+    &.disabled {
+      opacity: 0.6;
     }
   }
 }

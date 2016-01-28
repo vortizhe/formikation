@@ -55,9 +55,6 @@
   //
   // Select
   //
-  select {
-    width: 100%;
-  }
   .fk-select {
     display: block;
     width: 100%;
@@ -66,16 +63,10 @@
       float: right;
     }
     .fk-select-label {
-      display: inline-block;
-      margin: 0;
-      padding: 0;
+      display: inline;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-    }
-    &.disabled {
-      opacity: 0.6;
-      -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
     }
   }
 
@@ -114,9 +105,6 @@
       -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
       z-index: 3;
       cursor: pointer;
-    }
-    &.disabled {
-      opacity: 0.6;
     }
   }
 }

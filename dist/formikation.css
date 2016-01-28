@@ -6,7 +6,7 @@
  * 
  * Copyright 2016, Victor Ortiz. Licensed under MIT.
  * 
- * Released on: January 24, 2016
+ * Released on: January 28, 2016
  */
 .formikation label {
   display: block;
@@ -60,10 +60,6 @@
   border-radius: 50%;
 }
 
-.formikation select {
-  width: 100%;
-}
-
 .formikation .fk-select {
   display: block;
   width: 100%;
@@ -75,17 +71,10 @@
 }
 
 .formikation .fk-select .fk-select-label {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
+  display: inline;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.formikation .fk-select.disabled {
-  opacity: 0.6;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
 }
 
 .formikation .fk-file-input {
@@ -121,8 +110,4 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   z-index: 3;
   cursor: pointer;
-}
-
-.formikation .fk-file-input.disabled {
-  opacity: 0.6;
 }
