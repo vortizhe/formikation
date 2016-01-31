@@ -4,7 +4,7 @@ email: kespers@gmail.com
 description: >
   Formikation is a simple jQuery plugin to beautify form inputs with some css.
 baseurl: "/formikation"
-url: "http://vortizhe.github.io/formikation"
+url: "http://vortizhe.me"
 
 # Build settings
 markdown: redcarpet
