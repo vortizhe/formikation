@@ -6,7 +6,7 @@
  * 
  * Copyright 2016, Victor Ortiz. Licensed under MIT.
  * 
- * Released on: January 28, 2016
+ * Released on: January 31, 2016
  */
 .fk-default-theme label {
   padding-right: 16px;
@@ -48,9 +48,14 @@
 }
 
 .fk-default-theme .fk-select:after {
-  padding: 8px 12px;
-  margin: -8px -15px;
-  border-left: 1px solid #d8d8d8;
+  content: '\00bb';
+  display: block;
+  float: right;
+  padding: 10px 15px;
+  margin: -10px -15px;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .fk-default-theme .fk-select .fk-select-label {
@@ -58,10 +63,6 @@
 }
 
 .fk-default-theme .fk-select.fk-select-focus {
-  border-color: #000;
-}
-
-.fk-default-theme .fk-select.fk-select-focus:after {
   border-color: #000;
 }
 

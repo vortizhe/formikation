@@ -58,16 +58,20 @@ $border_color: #d8d8d8 !default;
     border-radius: $border_radius;
     line-height: 1.15;
     &:after {
-      padding: 8px 12px;
-      margin: -8px -15px;
-      border-left: 1px solid $border_color;
+      content: '\00bb';
+      display: block;
+      float: right;
+      padding: 10px 15px;
+      margin: -10px -15px;
+      -webkit-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+              transform: rotate(90deg);
     }
     .fk-select-label {
       color: #666;
     }
     &.fk-select-focus {
       border-color: #000;
-      &:after { border-color: #000; }
       .fl-select-label { color: #000; }
     }
     &.disabled {

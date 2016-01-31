@@ -58,10 +58,6 @@
   .fk-select {
     display: block;
     width: 100%;
-    &:after {
-      display: block;
-      float: right;
-    }
     .fk-select-label {
       display: inline;
       white-space: nowrap;

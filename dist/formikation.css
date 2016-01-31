@@ -6,7 +6,7 @@
  * 
  * Copyright 2016, Victor Ortiz. Licensed under MIT.
  * 
- * Released on: January 28, 2016
+ * Released on: January 31, 2016
  */
 .formikation label {
   display: block;
@@ -63,11 +63,6 @@
 .formikation .fk-select {
   display: block;
   width: 100%;
-}
-
-.formikation .fk-select:after {
-  display: block;
-  float: right;
 }
 
 .formikation .fk-select .fk-select-label {
