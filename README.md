@@ -18,7 +18,7 @@ The elements to work with are:
 
 ### Demo
 
-Take a look to [online demo](http://vortizhe.github.io/formikation/examples.html), there are some examples with diferent themes.
+Take a look to [online demo](http://vortizhe.me/formikation/examples.html), there are some examples with diferent themes.
 
 ## HTML Requisites
 
