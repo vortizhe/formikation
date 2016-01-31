@@ -31,6 +31,9 @@ $border_color: #d8d8d8 !default;
         left: 4px;
         top: 2px;
         border-radius: $border_radius;
+        -webkit-transition: all 0.3s ease;
+             -o-transition: all 0.3s ease;
+                transition: all 0.3s ease;
       }
     }
     &.fk-radio:before,
