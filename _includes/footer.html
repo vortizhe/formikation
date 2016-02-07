@@ -3,3 +3,12 @@
     <p class="copy">Formikation is licensed under the <a href="https://github.com/vortizhe/formikation/blob/master/LICENSE">MIT License</a>. Maintained by <a href="https://github.com/vortizhe">Victor Ortiz</a> &amp; <a href="https://github.com/carloscabo">Carlos Cabo</a>.</p>
   </div>
 </footer>
+
+<nav id="mobile-menu" class="burgermenu-right">
+  <ul class="burgermenu-panel">
+    <li class="logo">Formikation</li>
+    <li><a href="{{ site.baseurl }}/"{% if page.slug == "home" %} class="active"{% endif %}>Get Started</a></li>
+    <li><a href="{{ "/examples.html" | prepend: site.baseurl }}"{% if page.slug == "examples" %} class="active"{% endif %}>Examples</a></li>
+    <li><a href="https://github.com/vortizhe/formikation" target="_blank">View on Github</a></li>
+  </ul>
+</nav>

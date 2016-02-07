@@ -1,4 +1,4 @@
-<header class="site-header">
+<header class="site-header burgermenu-sticky-head">
   <div class="wrapper">
     <a class="logo" href="{{ site.baseurl }}/">
       Formikation
@@ -9,5 +9,6 @@
       <a href="{{ "/examples.html" | prepend: site.baseurl }}"{% if page.slug == "examples" %} class="active"{% endif %}>Examples</a>
       <a href="https://github.com/vortizhe/formikation" class="github">View on Github</a>
     </nav>
+    <a id="burgermenu-toggle" href="#mobile-menu" title="menu"><img src="{{ "/images/menu.svg" | prepend: site.baseurl }}{{ site.baseurl }}"></img></a>
   </div>
 </header>
