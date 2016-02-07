@@ -1,10 +1,3 @@
-<!-- Github ribbon -->
- <div class="github-fork-ribbon-wrapper right" style="position: fixed;">
-   <div class="github-fork-ribbon" style="top:7px;right:-77px;">
-     <a href="https://github.com/vortizhe/formikation">GitHub</a>
-   </div>
- </div>
-
 <header class="site-header">
   <div class="wrapper">
     <a class="logo" href="{{ site.baseurl }}/">
@@ -13,7 +6,8 @@
 
     <nav class="site-nav">
       <a href="{{ site.baseurl }}/"{% if page.slug == "home" %} class="active"{% endif %}>Get Started</a>
-      <a href="{{ site.baseurl }}/examples.html"{% if page.slug == "examples" %} class="active"{% endif %}>Examples</a>
+      <a href="{{ "/examples.html" | prepend: site.baseurl }}"{% if page.slug == "examples" %} class="active"{% endif %}>Examples</a>
+      <a href="https://github.com/vortizhe/formikation" class="github">View on Github</a>
     </nav>
   </div>
 </header>
