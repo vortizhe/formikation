@@ -15,6 +15,7 @@ kramdown:
 
 gems:
   - jekyll-sitemap
+  - jekyll-feed
 
 # Plugins
 sitemap:
