@@ -13,7 +13,7 @@ body {
 }
 
 .page-content {
-  padding-top: 110px;
+  padding-top: 65px;
 }
 
 .wrapper {
@@ -27,17 +27,10 @@ body {
   margin-bottom: 1em;
 }
 
-
-
-@include media($tablet) {
+@include media($mobile) {
   .wrapper {
     padding: 0 15px;
   }
-}
-
-
-
-@include media($mobile) {
   .page-content {
     padding-top: 65px;
   }

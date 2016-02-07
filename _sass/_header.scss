@@ -14,20 +14,21 @@
   .logo {
     display: block;
     float: left;
-    padding: 35px 0 35px 145px;
+    padding: 19px 0 19px 95px;
     background: url('../images/logo.png') no-repeat left center;
+    background-size: 75px 30px;
     border: 0;
     color: $col_text;
-    font-size: 32px;
+    font-size: 22px;
     font-weight: 300;
   }
   .site-nav {
     float: right;
-    padding: 35px 0;
-    font-size: 18px;
+    padding: 15px 35px 15px 0;
+    font-size: 16px;
     a {
       display: inline-block;
-      padding: 7px 0 7px 10px;
+      padding: 7px 5px 7px;
       border-bottom: 2px solid transparent;
       color: rgba($col_link, 0.6);
       &.active {
@@ -42,13 +43,7 @@
     .logo {
       width: 75px;
       height: 65px;
-      padding: 15px 0;
       font: 0/0 a;
-      background-size: 75px 30px;
-    }
-    .site-nav {
-      padding: 15px 0;
-      font-size: 16px;
     }
   }
 }
