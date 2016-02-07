@@ -1,11 +1,6 @@
 .site-header {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
   background: rgba(#fff, 0.9);
   border-bottom: 1px solid $col_border;
-  z-index: 1;
   box-shadow: 0 0 1px rgba(0,0,0,.25);
   .wrapper {
     padding-top: 0;
@@ -14,17 +9,19 @@
   .logo {
     display: block;
     float: left;
-    padding: 35px 0 35px 145px;
+    padding: 19px 0 19px 95px;
     background: url('../images/logo.png') no-repeat left center;
+    background-size: 75px 30px;
     border: 0;
     color: $col_text;
-    font-size: 32px;
+    font-size: 22px;
     font-weight: 300;
   }
+  #burgermenu-toggle,
   .site-nav {
     float: right;
-    padding: 35px 0;
-    font-size: 18px;
+    padding: 16px 0;
+    font-size: 16px;
     a {
       display: inline-block;
       padding: 7px 0 7px 10px;
@@ -35,6 +32,14 @@
       }
     }
   }
+  #burgermenu-toggle {
+    display: none;
+    text-decoration: none;
+    border: 0;
+    img {
+      vertical-align: middle;
+    }
+  }
 }
 
 @include media($mobile) {
@@ -42,13 +47,13 @@
     .logo {
       width: 75px;
       height: 65px;
-      padding: 15px 0;
       font: 0/0 a;
-      background-size: 75px 30px;
     }
     .site-nav {
-      padding: 15px 0;
-      font-size: 16px;
+      display: none;
+    }
+    #burgermenu-toggle {
+      display: block;
     }
   }
 }

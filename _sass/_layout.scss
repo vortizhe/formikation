@@ -12,8 +12,8 @@ body {
          box-sizing: border-box;
 }
 
-.page-content {
-  padding-top: 110px;
+.page-wrapper {
+  padding-top: 65px;
 }
 
 .wrapper {
@@ -27,18 +27,11 @@ body {
   margin-bottom: 1em;
 }
 
-
-
-@include media($tablet) {
+@include media($mobile) {
   .wrapper {
     padding: 0 15px;
   }
-}
-
-
-
-@include media($mobile) {
-  .page-content {
+  .page-wrapper {
     padding-top: 65px;
   }
 }
