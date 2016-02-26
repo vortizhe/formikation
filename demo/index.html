@@ -25,12 +25,16 @@
       float: left;
       padding-right: 20px;
     }
+    .formikation label {
+      margin: 0 0 1em;
+    }
   </style>
 </head>
 
 <body>
-  <h1>Basic clean styles</h1>
+  <h1>Formikation demo</h1>
   <form  action="./" class="formikation fk-default-theme">
+    <h2>Default theme</h2>
     <div class="row">
       <label for="example-select">Select example</label>
       <select id="example-select" name="example-select">
@@ -140,7 +144,8 @@
     </div>
   </form>
 
-  <form  action="./" class="formikation">
+  <form action="./" class="formikation">
+    <h2>Only functional styles</h2>
     <div class="row">
       <label for="example-select">Select example</label>
       <select id="example-select" name="example-select">
@@ -213,7 +218,6 @@
       <label>
         <input name="example-checkbox-3" type="checkbox" value="3" disabled>
         Checkbox disabled
-      </label>
       </label>
     </div>
   </form>

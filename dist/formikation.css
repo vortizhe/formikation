@@ -6,7 +6,7 @@
  * 
  * Copyright 2016, Victor Ortiz. Licensed under MIT.
  * 
- * Released on: January 31, 2016
+ * Released on: February 26, 2016
  */
 .formikation label {
   display: block;
@@ -26,7 +26,6 @@
   display: block;
   position: relative;
   display: inline-block;
-  margin: 0;
 }
 
 .formikation .fk-radio:before,
