@@ -1,0 +1,82 @@
+$fk-color: #2f97e9;
+
+.fk-switches label {
+  //
+  // Labels
+  //
+  &.fk-radio,
+  &.fk-check {
+    &:before {
+      content: ' ';
+      width: 48px;
+      height: 20px;
+      background: #CDCDCD;
+      border: 1px solid darken(#CDCDCD, 10%);
+    }
+    &:after {
+      content: ' ';
+      width: 20px; height: 20px;
+      top: -2px;
+      background: #FFF;
+      border: 1px solid darken(#CDCDCD, 10%);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+      -webkit-transition: all 0.3s ease;
+           -o-transition: all 0.3s ease;
+              transition: all 0.3s ease;
+    }
+  }
+
+  &.fk-radio {
+    &:before {
+      width: 32px;
+      border-radius: 20px;
+    }
+    &:after {
+      border-radius: 20px;
+      left: 12px;
+    }
+  }
+
+  &.fk-check {
+    &:before {
+      content: 'OFF';
+      padding-right: 18px;
+      color: #FFF;
+      font-size: 11px;
+      text-align: center;
+      line-height: 20px;
+    }
+    &:after {
+      left:28px;
+      background: #FFF;
+    }
+  }
+
+  &.checked {
+    &.fk-radio {
+      &:before {
+        background: $fk-color;
+        border-color: $fk-color;
+      }
+      &:after {
+        left: 0;
+        border-color: $fk-color;
+        background: #FFF;
+      }
+    }
+    &.fk-check {
+      &:before {
+        content: 'ON';
+        background: $fk-color;
+        border-color: $fk-color;
+        padding-right: 0;
+        padding-left: 18px;
+      }
+      &:after {
+        left: 0;
+        border-color: $fk-color;
+        background: #FFF;
+      }
+    }
+  }
+}

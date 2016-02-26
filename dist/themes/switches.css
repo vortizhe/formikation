@@ -1,0 +1,79 @@
+/*!
+ * Formikation 0.2.2
+ * Formikation is a simple jQuery plugin to beautify form inputs with some css.
+ * 
+ * https://github.com/vortizhe/formikation
+ * 
+ * Copyright 2016, Victor Ortiz. Licensed under MIT.
+ * 
+ * Released on: February 26, 2016
+ */
+.fk-switches label.fk-radio:before, .fk-switches label.fk-check:before {
+  content: ' ';
+  width: 48px;
+  height: 20px;
+  background: #CDCDCD;
+  border: 1px solid #b4b4b4;
+}
+
+.fk-switches label.fk-radio:after, .fk-switches label.fk-check:after {
+  content: ' ';
+  width: 20px;
+  height: 20px;
+  top: -2px;
+  background: #FFF;
+  border: 1px solid #b4b4b4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.fk-switches label.fk-radio:before {
+  width: 32px;
+  border-radius: 20px;
+}
+
+.fk-switches label.fk-radio:after {
+  border-radius: 20px;
+  left: 12px;
+}
+
+.fk-switches label.fk-check:before {
+  content: 'OFF';
+  padding-right: 18px;
+  color: #FFF;
+  font-size: 11px;
+  text-align: center;
+  line-height: 20px;
+}
+
+.fk-switches label.fk-check:after {
+  left: 28px;
+  background: #FFF;
+}
+
+.fk-switches label.checked.fk-radio:before {
+  background: #2f97e9;
+  border-color: #2f97e9;
+}
+
+.fk-switches label.checked.fk-radio:after {
+  left: 0;
+  border-color: #2f97e9;
+  background: #FFF;
+}
+
+.fk-switches label.checked.fk-check:before {
+  content: 'ON';
+  background: #2f97e9;
+  border-color: #2f97e9;
+  padding-right: 0;
+  padding-left: 18px;
+}
+
+.fk-switches label.checked.fk-check:after {
+  left: 0;
+  border-color: #2f97e9;
+  background: #FFF;
+}
