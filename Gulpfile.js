@@ -52,12 +52,13 @@
   gulp.task('styles', function() {
     gulp.src(paths.styles)
         .pipe(header(fk.banner, { pkg: fk.pkg, date: fk.date }))
-        .pipe(sass({outputStyle: 'expanded'}))
+        .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
         .pipe(gulp.dest(paths.dist));
+
 
     gulp.src(paths.themes)
         .pipe(header(fk.banner, { pkg: fk.pkg, date: fk.date }))
-        .pipe(sass({outputStyle: 'expanded'}))
+        .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
         .pipe(gulp.dest(paths.dist + 'themes/'));
 
   });
