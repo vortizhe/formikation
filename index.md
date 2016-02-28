@@ -24,6 +24,8 @@ The elements to work with are:
 
 Take a look to [online demo](/formikation/examples.html), there are some examples with diferent themes.
 
+ ![Formikation Screenshot](./images/screenshot.png)
+
 ## HTML Requisites
 
 The only html requisite is to style radiobuttons and checkboxes. Them must be wrapped by a `label`
