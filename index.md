@@ -65,8 +65,18 @@ $(function() {
 });
 ```
 
+## Update elements with JS
+
+If you need to update any formikation element with js, it's necessary to trigger `formikation.update` event to get UI change reflected.
+
+```js
+// Active a checkbox
+$('.your-element').prop('checked', true).trigger('formikation.update');
+//
+```
+
 ## IE8
 
 IE8 has some dificults on repainting `:before` and `:after` pseudo-elements after change checkbox or radiobuttons status.
 
-Is simple to fix it, just change pseudo-element content from `''` to `' '` _(this fix is applied on default theme)_.
+Is simple to fix it, just change pseudo-element content from `''` to `' '` _(this fix is applied on default theme)_. If you're going to develop your own theme, take care of this "trick".
