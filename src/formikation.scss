@@ -1,6 +1,9 @@
 .formikation {
   label {
     display: block;
+    font-size: 14px;
+    line-height: 17px;
+  }
   *:before,
   *:after {
     -webkit-box-sizing: border-box;
@@ -62,6 +65,7 @@
   .fk-select {
     display: block;
     width: 100%;
+    font-size: 14px;
     .fk-select-label {
       display: inline;
       white-space: nowrap;
@@ -81,6 +85,7 @@
     overflow: hidden;
     width: 100%;
     outline: 0;
+    font-size: 14px;
     &:after {
       content: attr(data-text);
       display: block;
@@ -93,6 +98,8 @@
     > p {
       margin: 0;
       padding: 0;
+      font-size: 14px;
+      line-height: 1.15;
     }
     input[type=file] {
       width: 100%;
@@ -105,6 +112,7 @@
       -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
       z-index: 3;
       cursor: pointer;
+      font-size: 14px;
     }
   }
 }
