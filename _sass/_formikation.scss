@@ -2,7 +2,15 @@
 
 .formikation label {
   display: block;
-  line-height: 1.25;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.formikation *:before,
+.formikation *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .formikation input[type=checkbox],
@@ -33,6 +41,7 @@
   content: '';
   display: block;
   position: absolute;
+  background: #fff;
 }
 
 .formikation .fk-radio.checked:after, .formikation .fk-radio.checked:after,
@@ -54,6 +63,7 @@
 .formikation .fk-select {
   display: block;
   width: 100%;
+  font-size: 14px;
 }
 
 .formikation .fk-select .fk-select-label {
@@ -69,6 +79,7 @@
   overflow: hidden;
   width: 100%;
   outline: 0;
+  font-size: 14px;
 }
 
 .formikation .fk-file-input:after {
@@ -84,7 +95,8 @@
 .formikation .fk-file-input > p {
   margin: 0;
   padding: 0;
-  line-height: 1;
+  font-size: 14px;
+  line-height: 1.15;
 }
 
 .formikation .fk-file-input input[type=file] {
@@ -97,6 +109,7 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   z-index: 3;
   cursor: pointer;
+  font-size: 14px;
 }
 
 // Default theme
