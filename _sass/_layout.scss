@@ -6,7 +6,7 @@ body {
   background: $col_bg;
 }
 
-* {
+*, *:after, *:before {
   -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
          box-sizing: border-box;
@@ -27,8 +27,25 @@ body {
   margin-bottom: 1em;
 }
 
+form {
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.example-block {
+  float: left;
+  width: 50%;
+  padding-right: 20px;
+}
+
 @include media($mobile) {
   .wrapper {
     padding: 0 15px;
+  }
+  .example-block {
+    float: none;
+    width: 100%;
+    padding: 0;
   }
 }

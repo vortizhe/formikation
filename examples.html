@@ -4,72 +4,116 @@ title: Examples - Formikation
 slug: examples
 ---
 
-<form  action="./" class="formikation">
-  <h1>Basic clean styles</h1>
-  <div class="row">
-    <label for="example-select">Select example</label>
-    <select id="example-select" name="example-select">
-      <option value="1">Select an option</option>
-      <option value="2">Option 1</option>
-      <option value="3">Option 2</option>
-      <option value="4">Option 3</option>
-      <option value="5">Option 4</option>
-      <option value="6">Option 5</option>
-      <option value="7">Option 6</option>
-    </select>
-  </div>
+<h1>Formikation demo</h1>
+ <form  action="./" class="formikation fk-default-theme">
+   <div class="example-block">
+     <h2>Default theme</h2>
+     <div class="row">
+       <label for="example-select">Select example</label>
+       <select id="example-select" name="example-select">
+         <option value="1">Select an option</option>
+         <option value="2">Option 1</option>
+         <option value="3">Option 2</option>
+         <option value="4">Option 3</option>
+         <option value="5">Option 4</option>
+         <option value="6">Option 5</option>
+         <option value="7">Option 6</option>
+       </select>
+     </div>
+     <div class="row">
+       <label for="example-select">Select with blank option example</label>
+       <select id="example-select" name="example-select">
+         <option value="1"></option>
+         <option value="2">Option 1</option>
+         <option value="3">Option 2</option>
+         <option value="4">Option 3</option>
+       </select>
+     </div>
 
-  <div class="row">
-    <label for="example-select-disabled">Select disabled example</label>
-    <select id="example-select-disabled" name="example-select-disabled" disabled>
-      <option value="1">Select an option</option>
-      <option value="2">Option 1</option>
-      <option value="3">Option 2</option>
-      <option value="4">Option 3</option>
-      <option value="5">Option 4</option>
-      <option value="6">Option 5</option>
-      <option value="7">Option 6</option>
-    </select>
-  </div>
+     <div class="row">
+       <label for="example-select-disabled">Select disabled example</label>
+       <select id="example-select-disabled" name="example-select-disabled" disabled>
+         <option value="1">Select an option</option>
+         <option value="2">Option 1</option>
+         <option value="3">Option 2</option>
+         <option value="4">Option 3</option>
+         <option value="5">Option 4</option>
+         <option value="6">Option 5</option>
+         <option value="7">Option 6</option>
+       </select>
+     </div>
 
-  <div class="row">
-    <label for="example-file-input">File input example</label>
-    <input type="file" name="example-file-input" id="example-file-input">
-  </div>
+     <div class="row">
+       <label for="example-file-input">File input example</label>
+       <input type="file" name="example-file-input" id="example-file-input" data-text="Select file...">
+     </div>
 
-  <div class="row">
-    <label for="example-file-input">File input disabled example</label>
-    <input type="file" name="example-file-input" id="example-file-input" disabled>
-  </div>
+     <div class="row">
+       <label for="example-file-input">File input disabled example</label>
+       <input type="file" name="example-file-input" id="example-file-input" data-text="Select file disabled..." disabled>
+     </div>
 
-  <div class="row">
-    <label>
-      <input type="radio" name="example-radios" value="1">
-      Radio example
-    </label>
-    <label>
-      <input type="radio" name="example-radios" value="2" checked="checked">
-      Radio checked
-    </label>
-    <label>
-      <input type="radio" name="example-radios" value="3" disabled>
-      Radio disabled
-    </label>
-  </div>
+     <div class="row">
+       <label>
+         <input type="radio" name="example-radios" value="1">
+         Radio example
+       </label>
+       <label>
+         <input type="radio" name="example-radios" value="2" checked="checked">
+         Radio checked
+       </label>
+       <label>
+         <input type="radio" name="example-radios" value="3" disabled>
+         Radio disabled
+       </label>
+     </div>
 
-  <div class="row">
-    <label>
-      <input name="example-checkbox-1" type="checkbox" value="1">
-      Checkbox example
-    </label>
-    <label>
-      <input name="example-checkbox-2" type="checkbox" value="2" checked="checked">
-      Checkbox checked
-    </label>
-    <label>
-      <input name="example-checkbox-3" type="checkbox" value="3" disabled>
-      Checkbox disabled
-    </label>
-    </label>
-  </div>
-</form>
+     <div class="row">
+       <label>
+         <input name="example-checkbox-1" type="checkbox" value="1">
+         Checkbox example
+       </label>
+       <label>
+         <input name="example-checkbox-2" type="checkbox" value="2" checked="checked">
+         Checkbox checked
+       </label>
+       <label>
+         <input name="example-checkbox-3" type="checkbox" value="3" disabled>
+         Checkbox disabled
+       </label>
+     </div>
+   </div>
+
+   <div class="example-block">
+     <h2>Switches radio and checkboxes theme</h2>
+     <div class="row fk-switches">
+       <label>
+         <input type="radio" name="example-radios-2" value="1">
+         Radio example
+       </label>
+       <label>
+         <input type="radio" name="example-radios-2" value="2" checked="checked">
+         Radio checked
+       </label>
+       <label>
+         <input type="radio" name="example-radios-2" value="3" disabled>
+         Radio disabled
+       </label>
+     </div>
+
+     <div class="row fk-switches">
+       <label>
+         <input name="example-checkbox-1" type="checkbox" value="1">
+         Checkbox example
+       </label>
+       <label>
+         <input name="example-checkbox-2" type="checkbox" value="2" checked="checked">
+         Checkbox checked
+       </label>
+       <label>
+         <input name="example-checkbox-3" type="checkbox" value="3" disabled>
+         Checkbox disabled
+       </label>
+     </div>
+   </div>
+ </form>
