@@ -10,6 +10,12 @@
  */
 .formikation label {
   display: block;
+
+.formikation *:before,
+.formikation *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .formikation input[type=checkbox],
