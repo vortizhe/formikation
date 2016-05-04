@@ -1,4 +1,4 @@
-/*! Formikation 0.2.3 Formikation is a simple jQuery plugin to beautify form inputs with some css. https://github.com/vortizhe/formikation Copyright 2016, Victor Ortiz. Licensed under MIT. Released on: February 28, 2016 */
+/*! Formikation 0.2.4 Formikation is a simple jQuery plugin to beautify form inputs with some css. https://github.com/vortizhe/formikation Copyright 2016, Victor Ortiz. Licensed under MIT. Released on: May 4, 2016 */
 .formikation label { display: block; font-size: 14px; line-height: 17px; }
 
 .formikation *:before, .formikation *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
