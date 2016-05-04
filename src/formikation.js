@@ -205,6 +205,18 @@ formikation = {
       selectSpan.removeClass(formikation.getClass($el, 'fk-disable-option'));
     }
 
+    // Add placeholder class to span if:
+    // - Is first option && has NO value
+    // - Is first option && HAS value && value is empty
+    if (
+      $el[0].selectedIndex < 1 &&
+      ( !currentSelected[0].hasAttribute('value') ||  currentSelected.val().length === 0 )
+     ) {
+      selectSpanInner.addClass('fk-is-placeholder');
+    } else {
+      selectSpanInner.removeClass('fk-is-placeholder');
+    }
+
     setTimeout(function() {
       selectSpan.removeClass(formikation.getClass($el, 'Open'));
       $(document).off('mouseup.'+formikation.getClass($el, 'Open'));
