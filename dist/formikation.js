@@ -1,5 +1,5 @@
 /*!
- * Formikation 0.2.4
+ * Formikation 0.2.5
  * Formikation is a simple jQuery plugin to beautify form inputs with some css.
  * 
  * https://github.com/vortizhe/formikation
@@ -214,6 +214,18 @@ formikation = {
       selectSpan.addClass(formikation.getClass($el, 'fk-disable-option'));
     } else {
       selectSpan.removeClass(formikation.getClass($el, 'fk-disable-option'));
+    }
+
+    // Add placeholder class to span if:
+    // - Is first option && has NO value
+    // - Is first option && HAS value && value is empty
+    if (
+      $el[0].selectedIndex < 1 &&
+      ( !currentSelected[0].hasAttribute('value') ||  currentSelected.val().length === 0 )
+     ) {
+      selectSpanInner.addClass('fk-is-placeholder');
+    } else {
+      selectSpanInner.removeClass('fk-is-placeholder');
     }
 
     setTimeout(function() {
