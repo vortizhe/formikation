@@ -6,7 +6,7 @@
  * 
  * Copyright 2016, Victor Ortiz. Licensed under MIT.
  * 
- * Released on: February 28, 2016
+ * Released on: May 4, 2016
  */
   
 formikation = {
@@ -34,7 +34,7 @@ formikation = {
     this.defaults = $.extend(this.defaults, params);
 
     // Process elements in collection
-    this.dat.els.each( function( idx ) {
+    this.dat.els.each( function(idx) {
       // Check / radio
       if ($(this).is(':checkbox, :radio')) {
         formikation.processRadioCheck(this);
@@ -53,9 +53,8 @@ formikation = {
 
   // Aquí se procesan los checks
   processRadioCheck: function(el) {
-    var
-      $el = $(el),
-      $label = $el.closest('label');
+    var $el = $(el),
+        $label = $el.closest('label');
 
     // Add class with sprite
     if ($el.is(':checkbox')) {
@@ -70,7 +69,7 @@ formikation = {
       $label.attr('style', $el.attr('style'));
     }
 
-    $el.on('formikation.update', function () {
+    $el.on('formikation.update', function() {
 
       if ($el.prop('checked')) {
         $el.closest('form').find(':radio[name="'+$el.attr('name')+'"]').closest('label').removeClass('checked');
@@ -81,7 +80,6 @@ formikation = {
 
       formikation.is_disabled($el, $label);
     });
-
 
     $el.on('click, change', function() {
       $el.trigger('formikation.update');
@@ -110,55 +108,55 @@ formikation = {
     }
 
     $el.addClass('has-fk-select')
-       .on('formikation.update', function () {
+       .on('formikation.update', function() {
          formikation.changed($el,selectSpan);
          formikation.updateSelectWH($el);
          formikation.is_disabled($el, selectSpan);
        })
-       .on('change', function () {
+       .on('change', function() {
           selectSpan.addClass(formikation.getClass($el, 'Changed'));
           $el.trigger('formikation.update');
        })
-       .on('keyup', function (e) {
-         if(!selectSpan.hasClass(formikation.getClass($el, 'Open'))){
+       .on('keyup', function(e) {
+         if (!selectSpan.hasClass(formikation.getClass($el, 'Open'))) {
            $el.blur();
            $el.focus();
-         } else{
-           if(e.which==13||e.which==27){
+         } else {
+           if (e.which==13||e.which==27) {
              formikation.changed($el,selectSpan);
            }
          }
        })
-       .on('mousedown', function (e) {
+       .on('mousedown', function(e) {
          selectSpan.removeClass(formikation.getClass($el, 'Changed'));
        })
-       .on('mouseup', function (e) {
-         if( !selectSpan.hasClass(formikation.getClass($el, 'Open'))){
+       .on('mouseup', function(e) {
+         if ( !selectSpan.hasClass(formikation.getClass($el, 'Open'))) {
            // if FF and there are other selects open, just apply focus
-           if($('.'+formikation.getClass($el, 'Open')).not(selectSpan).length>0 && typeof InstallTrigger !== 'undefined'){
+           if ($('.'+formikation.getClass($el, 'Open')).not(selectSpan).length>0 && typeof InstallTrigger !== 'undefined') {
              $el.focus();
-           }else{
+           } else {
              selectSpan.addClass(formikation.getClass($el, 'Open'));
              e.stopPropagation();
-             $(document).one('mouseup.'+formikation.getClass($el, 'Open'), function (e) {
-               if( e.target != $el.get(0) && $.inArray(e.target,$el.find('*').get()) < 0 ){
+             $(document).one('mouseup.'+formikation.getClass($el, 'Open'), function(e) {
+               if ( e.target != $el.get(0) && $.inArray(e.target,$el.find('*').get()) < 0 ) {
                  $el.blur();
-               }else{
+               } else {
                  formikation.changed($el,selectSpan);
                }
              });
            }
          }
        })
-       .focus(function () {
+       .focus(function() {
          selectSpan.removeClass(formikation.getClass($el, '-changed')).addClass(formikation.getClass($el, '-focus'));
        })
-       .blur(function () {
+       .blur(function() {
          selectSpan.removeClass(formikation.getClass($el, '-focus')+' '+formikation.getClass($el, '-open'));
        })
-       .hover(function () {
+       .hover(function() {
          selectSpan.addClass(formikation.getClass($el, '-hover'));
-       }, function () {
+       }, function() {
          selectSpan.removeClass(formikation.getClass($el, '-hover'));
        })
        .trigger('formikation.update');
@@ -169,32 +167,31 @@ formikation = {
     var $div = $('<div class="fk-file-input">'),
         $el = $(el),
         text = $el.attr('data-text');
+
     $el.on('change', function(e) {
-      // e.preventDefault();
       var fn = $el.val().replace(/C:\\fakepath\\/i, '');
       if (!fn) {
         fn = text;
       }
       $el.prev('p').html(fn);
     });
+
     formikation.is_disabled($el, $div);
     $el.wrap($div.attr('data-text', text)).parent().prepend('<p>' + text + '</p>');
   },
 
   // Updates select width to match span
   updateSelectWH: function(sel) {
-    var
-      $sel = $(sel),
-      $spa = $sel.next('span');
+    var $sel = $(sel),
+        $spa = $sel.next('span');
 
     // Set to inline-block before calculating outerHeight
     $spa.css({
       display: 'inline-block'
     });
 
-    var
-      w = parseInt($spa.outerWidth(), 10),
-      h = parseInt($spa.outerHeight(), 10);
+    var w = parseInt($spa.outerWidth(), 10),
+        h = parseInt($spa.outerHeight(), 10);
 
     $sel.css({
       '-webkit-appearance': 'menulist-button',
@@ -216,8 +213,8 @@ formikation = {
   // ?
   changed: function($el,selectSpan) {
     var currentSelected = $el.find(':selected'),
-    selectSpanInner = selectSpan.children(':first'),
-    html = currentSelected.html() || $el.val();
+        selectSpanInner = selectSpan.children(':first'),
+        html = currentSelected.html() || $el.val();
 
     selectSpanInner.html(html);
 
