@@ -174,18 +174,10 @@ formikation = {
     var $sel = $(sel),
         $spa = $sel.next('span');
 
-    // Set to inline-block before calculating outerHeight
-    $spa.css({
-      display: 'inline-block'
-    });
-
-    var w = parseInt($spa.outerWidth(), 10),
-        h = parseInt($spa.outerHeight(), 10);
-
     $sel.css({
       '-webkit-appearance': 'menulist-button',
-      width: w,
-      height: h,
+      width: parseInt($spa.outerWidth(), 10),
+      height: parseInt($spa.outerHeight(), 10),
       position: 'absolute',
       opacity: 0,
       fontSize: $spa.css('font-size')
