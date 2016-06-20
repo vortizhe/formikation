@@ -1,14 +1,14 @@
 /*!
- * Formikation 0.2.5
+ * Formikation 0.2.6
  * Formikation is a simple jQuery plugin to beautify form inputs with some css.
- * 
+ *
  * https://github.com/vortizhe/formikation
- * 
+ *
  * Copyright 2016, Victor Ortiz. Licensed under MIT.
- * 
- * Released on: May 4, 2016
+ *
+ * Released on: June 20, 2016
  */
-  
+
 formikation = {
 
   // Internal variables / DOM caching / etc.

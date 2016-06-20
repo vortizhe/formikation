@@ -72,6 +72,9 @@ $border_color: #d8d8d8 !default;
     }
     .fk-select-label {
       color: #666;
+      &.fk-is-placeholder {
+        font-style: italic;
+      }
     }
     &.fk-select-focus {
       border-color: #000;

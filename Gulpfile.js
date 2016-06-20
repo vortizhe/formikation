@@ -31,14 +31,14 @@
           '/*!',
           ' * Formikation <%= pkg.version %>',
           ' * <%= pkg.description %>',
-          ' * ',
+          ' *',
           ' * <%= pkg.homepage %>',
-          ' * ',
+          ' *',
           ' * Copyright <%= date.year %>, <%= pkg.author.name %>. Licensed under <%= pkg.license %>.',
-          ' * ',
+          ' *',
           ' * Released on: <%= date.month %> <%= date.day %>, <%= date.year %>',
           ' */',
-          '  ',''].join('\n')
+          '',''].join('\n')
       };
 
   gulp.task('scripts', function() {

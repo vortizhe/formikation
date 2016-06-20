@@ -65,3 +65,7 @@ $(function() {
 IE8 has some dificults on repainting `:before` and `:after` pseudo-elements after change checkbox or radiobuttons status.
 
 Is simple to fix it, just change pseudo-element content from `''` to `' '` _(this fix is applied on default theme)_.
+
+## Changelog
+
+* 0.2.6 (2016/05/XX) Added .fk-is-placeholder to select option without value
