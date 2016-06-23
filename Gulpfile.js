@@ -64,7 +64,7 @@
   });
 
   gulp.task('update_gem_version', function () {
-    require('fs').writeFileSync('lib/Formikation/version.rb', "module Formikation\n  Formikation = \""+mqbe.pkg.version+"\"\nend");
+    require('fs').writeFileSync('lib/Formikation/version.rb', "module Formikation\n  VERSION = \""+fk.pkg.version+"\"\nend");
   });
 
   gulp.task('build', function () {
