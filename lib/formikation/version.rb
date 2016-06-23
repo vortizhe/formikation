@@ -1,3 +1,3 @@
 module Formikation
-  VERSION = "0.0.1"
+  VERSION = "0.2.6"
 end

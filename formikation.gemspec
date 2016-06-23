@@ -6,11 +6,11 @@ require 'formikation/version'
 Gem::Specification.new do |spec|
   spec.name          = "formikation"
   spec.version       = Formikation::VERSION
-  spec.authors       = ["carloscabo"]
-  spec.email         = ["carlos.cabo@the-cocktail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.authors       = ["vortizhe"]
+  spec.email         = ["kespers@gmail.com"]
+  spec.summary       = "Formikation is a simple jQuery plugin to beautify form inputs with some css."
+  spec.description   = "Formikation is a simple jQuery plugin to beautify form inputs, select, radios and checkboxes with some css. It supports custom theming and is IE8+ compatible."
+  spec.homepage      = "http://vortizhe.me/formikation/"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
