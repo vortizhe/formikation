@@ -63,6 +63,10 @@
 
   });
 
+  gulp.task('update_gem_version', function () {
+    require('fs').writeFileSync('lib/Formikation/version.rb', "module Formikation\n  Formikation = \""+mqbe.pkg.version+"\"\nend");
+  });
+
   gulp.task('build', function () {
     gulp.src(paths.scripts)
         .pipe(header(fk.banner, { pkg: fk.pkg, date: fk.date }))
@@ -110,7 +114,7 @@
   gulp.task('open', function () {
     return gulp.src(paths.demo + 'index.html').pipe(open({ uri: 'http://localhost:3000/' + paths.demo + 'index.html'}));
   });
-  gulp.task('dist', ['styles', 'scripts', 'build']);
+  gulp.task('dist', ['styles', 'scripts', 'build', 'update_gem_version']);
 
   gulp.task('server', ['watch', 'connect', 'open']);
 
