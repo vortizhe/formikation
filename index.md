@@ -8,6 +8,34 @@ slug: home
 
 [![GitHub version](https://badge.fury.io/gh/vortizhe%2Fformikation.svg)](https://badge.fury.io/gh/vortizhe%2Fformikation)
 
+# Installation
+
+## 1a. Use as Rails gem
+
+Simply include in your `gemfile`:  
+```
+gem 'formikation'
+```
+
+and run `bundle install`
+
+Then add in your `application.js` (its recommend to be included just after `JQuery`)
+```
+//= require formikation
+```
+
+And in your `application.css`:  
+```sass
+@import "formikation";
+@import "fk-theme-default";
+```
+
+## 1b. Use _standalone_
+
+If you want to add it to your project by hand, copy `dist/formikation.js` or `dist/formikation.min.js` (minified) in your project and be sure that its included in the pages **after JQuery**.
+
+Do the same with the stylesheets, copy the `dist/formikation.css`, `dist/themes/fk-theme-default.css` and `dist/themes/fk-theme-switches.css`. If you prefer the SASS version of this files you can find them in `src/` and `src/themes`.
+
 ### Simple form beautifier
 
 *Formikation* is a simple jQuery plugin to beautify form inputs with some css.
@@ -90,3 +118,8 @@ $('.form-element').prop('checked', true).trigger('formikation.update');
 IE8 has some dificults on repainting `:before` and `:after` pseudo-elements after change checkbox or radiobuttons status.
 
 Is simple to fix it, just change pseudo-element content from `''` to `' '` _(this fix is applied on default theme)_.
+
+## Changelog
+
+* 0.2.7 (2016/07/12) Converted to Rails Gems. Some style names updated fk-default-theme -> fk-theme-default
+* 0.2.6 (2016/05/XX) Added .fk-is-placeholder to select option without value
