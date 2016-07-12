@@ -1,6 +1,6 @@
 # Formikation
 
-[![GitHub version](https://badge.fury.io/gh/vortizhe%2Fformikation.svg)](https://badge.fury.io/gh/vortizhe%2Fformikation)
+[![GitHub version](https://badge.fury.io/rb/formikation.svg)](https://badge.fury.io/gh/vortizhe%2Fformikation)
 
 # Installation
 
