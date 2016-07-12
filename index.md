@@ -19,7 +19,7 @@ gem 'formikation'
 
 and run `bundle install`
 
-Then add in your `application.js` (its recommend to be included just after `JQuery`)
+Then add in your `application.js` (its recommend to be included just after `JQuery`)  
 ```
 //= require formikation
 ```
@@ -121,5 +121,5 @@ Is simple to fix it, just change pseudo-element content from `''` to `' '` _(thi
 
 ## Changelog
 
-* 0.2.7 (2016/07/12) Converted to Rails Gems. Some style names updated fk-default-theme -> fk-theme-default
+* 0.2.7 (2016/07/12) Converted to Rails Gems. Some style names updated .fk-default-theme -> .fk-theme-default
 * 0.2.6 (2016/05/XX) Added .fk-is-placeholder to select option without value
