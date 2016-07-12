@@ -8,12 +8,12 @@
  *
  * Released on: July 12, 2016
  */
-.fk-default-theme label {
+.fk-theme-default label {
   padding-right: 16px;
   margin-bottom: 0.5em;
 }
 
-.fk-default-theme label.fk-radio:before, .fk-default-theme label.fk-check:before {
+.fk-theme-default label.fk-radio:before, .fk-theme-default label.fk-check:before {
   content: ' ';
   width: 20px;
   height: 20px;
@@ -22,7 +22,7 @@
   border-radius: 3px;
 }
 
-.fk-default-theme label.fk-radio:after, .fk-default-theme label.fk-check:after {
+.fk-theme-default label.fk-radio:after, .fk-theme-default label.fk-check:after {
   content: ' ';
   width: 12px;
   height: 12px;
@@ -34,15 +34,15 @@
   transition: all 0.3s ease;
 }
 
-.fk-default-theme label.fk-radio:before, .fk-default-theme label.fk-radio:after {
+.fk-theme-default label.fk-radio:before, .fk-theme-default label.fk-radio:after {
   border-radius: 50%;
 }
 
-.fk-default-theme label.checked.fk-radio:after, .fk-default-theme label.checked.fk-check:after {
+.fk-theme-default label.checked.fk-radio:after, .fk-theme-default label.checked.fk-check:after {
   background: #2f97e9;
 }
 
-.fk-default-theme .fk-select {
+.fk-theme-default .fk-select {
   padding: 10px;
   border: 1px solid #d8d8d8;
   background: #fff;
@@ -50,7 +50,7 @@
   line-height: 1.15;
 }
 
-.fk-default-theme .fk-select:after {
+.fk-theme-default .fk-select:after {
   content: '\00bb';
   display: block;
   float: right;
@@ -61,33 +61,33 @@
   transform: rotate(90deg);
 }
 
-.fk-default-theme .fk-select .fk-select-label {
+.fk-theme-default .fk-select .fk-select-label {
   color: #666;
 }
 
-.fk-default-theme .fk-select .fk-select-label.fk-is-placeholder {
+.fk-theme-default .fk-select .fk-select-label.fk-is-placeholder {
   font-style: italic;
 }
 
-.fk-default-theme .fk-select.fk-select-focus {
+.fk-theme-default .fk-select.fk-select-focus {
   border-color: #000;
 }
 
-.fk-default-theme .fk-select.fk-select-focus .fl-select-label {
+.fk-theme-default .fk-select.fk-select-focus .fl-select-label {
   color: #000;
 }
 
-.fk-default-theme .fk-select.disabled {
+.fk-theme-default .fk-select.disabled {
   opacity: 0.6;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
 }
 
-.fk-default-theme .has-fk-select {
+.fk-theme-default .has-fk-select {
   width: 100%;
   border: 0;
 }
 
-.fk-default-theme .fk-file-input {
+.fk-theme-default .fk-file-input {
   padding: 10px;
   background: #fff;
   border: 1px solid #ccc;
@@ -95,7 +95,7 @@
   line-height: 1.15;
 }
 
-.fk-default-theme .fk-file-input:after {
+.fk-theme-default .fk-file-input:after {
   right: 3px;
   top: 3px;
   padding: 8px 10px;
@@ -106,6 +106,6 @@
   line-height: 1;
 }
 
-.fk-default-theme .fk-file-input.disabled {
+.fk-theme-default .fk-file-input.disabled {
   opacity: 0.6;
 }
