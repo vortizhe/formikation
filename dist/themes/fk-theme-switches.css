@@ -1,14 +1,14 @@
 /*!
- * Formikation 0.2.6
+ * Formikation 0.2.7
  * Formikation is a simple jQuery plugin to beautify form inputs with some css.
  *
  * https://github.com/vortizhe/formikation
  *
  * Copyright 2016, Victor Ortiz. Licensed under MIT.
  *
- * Released on: June 20, 2016
+ * Released on: July 12, 2016
  */
-.fk-switches label.fk-radio:before, .fk-switches label.fk-check:before {
+.fk-theme-switches label.fk-radio:before, .fk-theme-switches label.fk-check:before {
   content: ' ';
   width: 48px;
   height: 20px;
@@ -16,7 +16,7 @@
   border: 1px solid #b4b4b4;
 }
 
-.fk-switches label.fk-radio:after, .fk-switches label.fk-check:after {
+.fk-theme-switches label.fk-radio:after, .fk-theme-switches label.fk-check:after {
   content: ' ';
   width: 20px;
   height: 20px;
@@ -29,17 +29,17 @@
   transition: all 0.3s ease;
 }
 
-.fk-switches label.fk-radio:before {
+.fk-theme-switches label.fk-radio:before {
   width: 32px;
   border-radius: 20px;
 }
 
-.fk-switches label.fk-radio:after {
+.fk-theme-switches label.fk-radio:after {
   border-radius: 20px;
   left: 12px;
 }
 
-.fk-switches label.fk-check:before {
+.fk-theme-switches label.fk-check:before {
   content: 'OFF';
   padding-right: 18px;
   color: #FFF;
@@ -48,23 +48,23 @@
   line-height: 20px;
 }
 
-.fk-switches label.fk-check:after {
+.fk-theme-switches label.fk-check:after {
   left: 28px;
   background: #FFF;
 }
 
-.fk-switches label.checked.fk-radio:before {
+.fk-theme-switches label.checked.fk-radio:before {
   background: #2f97e9;
   border-color: #2f97e9;
 }
 
-.fk-switches label.checked.fk-radio:after {
+.fk-theme-switches label.checked.fk-radio:after {
   left: 0;
   border-color: #2f97e9;
   background: #FFF;
 }
 
-.fk-switches label.checked.fk-check:before {
+.fk-theme-switches label.checked.fk-check:before {
   content: 'ON';
   background: #2f97e9;
   border-color: #2f97e9;
@@ -72,7 +72,7 @@
   padding-left: 18px;
 }
 
-.fk-switches label.checked.fk-check:after {
+.fk-theme-switches label.checked.fk-check:after {
   left: 0;
   border-color: #2f97e9;
   background: #FFF;
