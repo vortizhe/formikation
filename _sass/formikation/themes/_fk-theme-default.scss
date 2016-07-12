@@ -1,0 +1,118 @@
+// vars
+
+$border_radius: 3px !default;
+$color: #2f97e9 !default;
+$border_color: #d8d8d8 !default;
+
+
+
+.fk-theme-default {
+
+  //
+  // Labels
+  //
+  label {
+    padding-right: 16px;
+    margin-bottom: 0.5em;
+    &.fk-radio,
+    &.fk-check {
+      &:before {
+        content: ' ';
+        width: 20px;
+        height: 20px;
+        border: 1px solid $border_color;
+        margin-top: -3px;
+        border-radius: $border_radius;
+      }
+      &:after {
+        content: ' ';
+        width: 12px;
+        height: 12px;
+        left: 4px;
+        top: 2px;
+        border-radius: $border_radius;
+        -webkit-transition: all 0.3s ease;
+             -o-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+      }
+    }
+    &.fk-radio:before,
+    &.fk-radio:after {
+      border-radius: 50%;
+    }
+    &.checked {
+      &.fk-radio:after,
+      &.fk-check:after {
+        // IE8 does not render the changes in a :pseudo-element with we don't change the 'content', thus we change it from ' ' -> ''.
+        background: $color;
+      }
+    }
+  }
+
+
+
+  //
+  // Select
+  //
+  .fk-select {
+    padding: 10px;
+    border: 1px solid $border_color;
+    background: #fff;
+    border-radius: $border_radius;
+    line-height: 1.15;
+    &:after {
+      content: '\00bb';
+      display: block;
+      float: right;
+      padding: 10px 15px;
+      margin: -10px -15px;
+      -webkit-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+              transform: rotate(90deg);
+    }
+    .fk-select-label {
+      color: #666;
+      &.fk-is-placeholder {
+        font-style: italic;
+      }
+    }
+    &.fk-select-focus {
+      border-color: #000;
+      .fl-select-label { color: #000; }
+    }
+    &.disabled {
+      opacity: 0.6;
+      -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    }
+  }
+  .has-fk-select {
+    width: 100%;
+    border: 0;
+  }
+
+
+
+  //
+  // File input
+  //
+  .fk-file-input {
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: $border_radius;
+    line-height: 1.15;
+    &:after {
+      right: 3px;
+      top: 3px;
+      padding: 8px 10px;
+      text-align: center;
+      color: #fff;
+      background-color: $color;
+      border-radius: $border_radius;
+      line-height: 1;
+    }
+    &.disabled {
+      opacity: 0.6;
+    }
+  }
+}

@@ -17,6 +17,8 @@
 @import "header";
 @import "footer";
 @import "syntax-highlighting";
-@import "formikation";
+@import "formikation/formikation";
+@import "formikation/themes/fk-theme-default";
+@import "formikation/themes/fk-theme-switches";
 @import "burgermenu";
 @import "burgermenu-theme";

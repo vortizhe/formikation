@@ -1,0 +1,118 @@
+.formikation {
+  label {
+    display: block;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+  //
+  // Checks and radios
+  //
+  input[type=checkbox],
+  input[type=radio] {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    left: -9999px;
+  }
+  .fk-radio,
+  .fk-check {
+    display: block;
+    position: relative;
+    display: inline-block;
+    &:before {
+      content: ' ';
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      background: #fff;
+    }
+    &.checked {
+      &:after,
+      &:after {
+        // IE8 does not render the changes in a :pseudo-element with we don't change the 'content', thus we change it from ' ' to ''
+        content: ' ';
+      }
+    }
+    &.disabled {
+      opacity: 0.6;
+      -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    }
+  }
+  .fk-radio {
+    &:before,
+    &:after {
+      border-radius: 50%;
+    }
+  }
+
+
+
+  //
+  // Select
+  //
+  .fk-select {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    .fk-select-label {
+      display: inline;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+
+
+  //
+  // File input
+  //
+  .fk-file-input {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    outline: 0;
+    font-size: 14px;
+    &:after {
+      content: attr(data-text);
+      display: block;
+      position: absolute;
+      right: 0;
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+    }
+    > p {
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+      line-height: 1.15;
+    }
+    input[type=file] {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      // IE8
+      -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      z-index: 3;
+      cursor: pointer;
+      font-size: 14px;
+    }
+  }
+}
