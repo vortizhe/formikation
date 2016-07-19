@@ -1,7 +1,6 @@
 // Aquí se procesan los checks
-processRadioCheck: function(el) {
-  var $el = $(el),
-      $label = $el.closest('label');
+function processRadioCheck($el, options) {
+  var $label = $el.closest('label');
 
   // Add class with sprite
   if ($el.is(':checkbox')) {
@@ -9,23 +8,23 @@ processRadioCheck: function(el) {
   } else {
     $label.addClass('fk-radio');
   }
-  if (this.defaults.mapClass) {
+  if (options.mapClass) {
     $label.addClass($el.attr('class'));
   }
-  if (this.defaults.mapStyle) {
+  if (options.mapStyle) {
     $label.attr('style', $el.attr('style'));
   }
 
   $el.on('formikation.update', function() {
 
     if ($el.prop('checked')) {
-      $el.closest('form').find(':radio[name="'+$el.attr('name')+'"]').closest('label').removeClass('checked');
+      $el.closest('form').find(':radio[name="' + $el.attr('name') + '"]').closest('label').removeClass('checked');
       $label.addClass('checked');
     } else {
       $label.removeClass('checked');
     }
 
-    formikation.is_disabled($el, $label);
+    is_disabled($el, $label);
   });
 
   $el.on('click, change', function() {
@@ -33,4 +32,4 @@ processRadioCheck: function(el) {
   });
 
   $el.trigger('formikation.update');
-},
+}
