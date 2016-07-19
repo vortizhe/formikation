@@ -46,6 +46,6 @@
   "scripts": {
     "test": "gulp dist"
   },
-  "main": "dist/jquery.formikation.js",
-  "style": "dist/mqbe.css"
+  "main": "dist/formikation.min.js",
+  "style": "dist/formikation.min.css"
 }
