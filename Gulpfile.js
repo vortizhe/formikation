@@ -14,7 +14,7 @@
       stylish     = require('jshint-stylish'),
       sass        = require('gulp-sass'),
       paths = {
-        scripts: 'src/*.js',
+        scripts: 'src/formikation.js',
         styles: 'src/*.scss',
         dist: 'dist/',
         demo: 'demo/',
@@ -54,7 +54,6 @@
         .pipe(header(fk.banner, { pkg: fk.pkg, date: fk.date }))
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
         .pipe(gulp.dest(paths.dist));
-
 
     gulp.src(paths.themes)
         .pipe(header(fk.banner, { pkg: fk.pkg, date: fk.date }))
@@ -107,12 +106,14 @@
   gulp.task('connect', function () {
       return connect.server({
           root: './',
-          port:'3000'
+          port: '3000',
+          root: ['demo', 'dist'],
+          livereload: true
       });
   });
 
   gulp.task('open', function () {
-    return gulp.src(paths.demo + 'index.html').pipe(open({ uri: 'http://localhost:3000/' + paths.demo + 'index.html'}));
+    return gulp.src(paths.demo + 'index.html').pipe(open({ uri: 'http://localhost:3000/index.html'}));
   });
   gulp.task('dist', ['styles', 'scripts', 'build', 'update_gem_version']);
 
