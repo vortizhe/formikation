@@ -13,6 +13,7 @@
       jshint      = require('gulp-jshint'),
       stylish     = require('jshint-stylish'),
       sass        = require('gulp-sass'),
+      include     = require("gulp-include"),
       paths = {
         scripts: 'src/formikation.js',
         styles: 'src/*.scss',
@@ -44,9 +45,10 @@
   gulp.task('scripts', function() {
     gulp.src(paths.scripts)
         .pipe(header(fk.banner, { pkg: fk.pkg, date: fk.date }))
-        .pipe(gulp.dest(paths.dist))
+        .pipe(include())
         .pipe(jshint())
-        .pipe(jshint.reporter(stylish));
+        .pipe(jshint.reporter(stylish))
+        .pipe(gulp.dest(paths.dist));
   });
 
   gulp.task('styles', function() {
@@ -70,6 +72,7 @@
     gulp.src(paths.scripts)
         .pipe(header(fk.banner, { pkg: fk.pkg, date: fk.date }))
         .pipe(size({title: 'Formikation scripts'}))
+        .pipe(include())
         .pipe(jshint())
         .pipe(jshint.reporter(stylish))
         .pipe(sourcemaps.init())

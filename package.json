@@ -2,7 +2,15 @@
   "name": "Formikation",
   "version": "0.2.7",
   "description": "Formikation is a simple jQuery plugin to beautify form inputs with some css.",
-  "keywords": ["jquery-plugin", "forms", "custom form", "checkbox", "radiobutton", "select", "file"],
+  "keywords": [
+    "jquery-plugin",
+    "forms",
+    "custom form",
+    "checkbox",
+    "radiobutton",
+    "select",
+    "file"
+  ],
   "homepage": "https://github.com/vortizhe/formikation",
   "author": {
     "name": "Victor Ortiz",
@@ -18,7 +26,9 @@
     "type": "git",
     "url": "https://github.com/vortizhe/formikation.git"
   },
-  "license": ["MIT"],
+  "license": [
+    "MIT"
+  ],
   "files": [
     "dist",
     "src",
@@ -33,6 +43,7 @@
     "gulp": "~3.9.0",
     "gulp-connect": "^2.2.0",
     "gulp-header": "~1.7.1",
+    "gulp-include": "^2.3.0",
     "gulp-jshint": "~2.0.0",
     "gulp-open": "^1.0.0",
     "gulp-rename": "~1.2.2",
