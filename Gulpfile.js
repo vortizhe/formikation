@@ -14,8 +14,9 @@
       stylish     = require('jshint-stylish'),
       sass        = require('gulp-sass'),
       include     = require("gulp-include"),
+      KarmaSrv    = require('karma').Server,
       paths = {
-        scripts: 'src/formikation.js',
+        scripts: 'src/*.js',
         styles: 'src/*.scss',
         dist: 'dist/',
         demo: 'demo/',
@@ -102,25 +103,45 @@
   });
 
   gulp.task('watch', function () {
-      gulp.watch(paths.scripts, [ 'scripts' ]);
-      gulp.watch([paths.styles, paths.themes], [ 'styles' ]);
+    gulp.watch(paths.scripts, [ 'scripts' ]);
+    gulp.watch([paths.styles, paths.themes], [ 'styles' ]);
   });
 
   gulp.task('connect', function () {
-      return connect.server({
-          root: './',
-          port: '3000',
-          root: ['demo', 'dist'],
-          livereload: true
-      });
+    return connect.server({
+      root: ['demo', 'dist'],
+      port: '3000',
+      livereload: true
+    });
   });
 
   gulp.task('open', function () {
     return gulp.src(paths.demo + 'index.html').pipe(open({ uri: 'http://localhost:3000/index.html'}));
   });
+
   gulp.task('dist', ['styles', 'scripts', 'build', 'update_gem_version']);
 
   gulp.task('server', ['watch', 'connect', 'open']);
 
-  gulp.task('default', ['server']);
+  gulp.task('default', ['server', 'tdd']);
+
+
+  /**
+   * Run test once and exit
+   */
+  gulp.task('test', function (done) {
+    new KarmaSrv ({
+      configFile: __dirname + '/karma.conf.js',
+      singleRun: true
+    }, done).start();
+  });
+
+  /**
+   * Watch for file changes and re-run tests on each change
+   */
+  gulp.task('tdd', function (done) {
+    new KarmaSrv ({
+      configFile: __dirname + '/karma.conf.js'
+    }, done).start();
+  });
 })();
