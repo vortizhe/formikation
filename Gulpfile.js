@@ -15,6 +15,7 @@
       sass        = require('gulp-sass'),
       include     = require("gulp-include"),
       KarmaSrv    = require('karma').Server,
+      jasmine     = require('gulp-jasmine'),
       paths = {
         scripts: 'src/*.js',
         styles: 'src/*.scss',
